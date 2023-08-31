@@ -1,4 +1,4 @@
 theme: minima
 title: "Gama-CommuteCast"
-description: "Aplikasi tracker bus dan informasi kondisi lingkungan di sekitar UGM."https://github.com/ahmadzaki2975/Gama-CommuteCast/edit/main/_config.yml
+description: "Aplikasi tracker bus dan informasi kondisi lingkungan di sekitar UGM."
 exclude: ['README.md']
