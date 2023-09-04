@@ -1,3 +1,5 @@
+![Gama CommuteCast Logo](https://github.com/ahmadzaki2975/Gama-CommuteCast/blob/main/Gama%20Commute%20Cast.png)
+
 # Gama-CommuteCast
 
 Aplikasi tracker bus dan informasi kondisi lingkungan di sekitar UGM.
