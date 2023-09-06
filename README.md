@@ -10,4 +10,4 @@ Ketua Kelompok: Giga Hidjrika Aura Adkhy - 21/479228/TK/52833
 
 Anggota 1: Ahmad Zaki Akmal - 21/480179/TK/52981
 
-Anggota 2: Anisa Bintang Maharani - 21/478671/K/52746
+Anggota 2: Anisa Bintang Maharani - 21/478671/TK/52746
