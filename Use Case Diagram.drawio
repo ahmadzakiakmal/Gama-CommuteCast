@@ -1,17 +1,32 @@
-<mxfile host="app.diagrams.net" modified="2023-09-07T06:39:23.956Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.62" etag="ch8TuELu-movaTh6fLrE" version="21.7.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-07T06:45:56.653Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.62" etag="r6fYqLCPvN7RykZmGY-M" version="21.7.2" type="github">
   <diagram name="Page-1" id="aWu1qu-ijuKOS0AyKK5k">
-    <mxGraphModel dx="1386" dy="740" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="705" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="JHKX-R4H1pewJYHn4ZbS-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
-          <mxGeometry x="60" y="290" width="30" height="60" as="geometry" />
+        <mxCell id="JHKX-R4H1pewJYHn4ZbS-4" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="540" y="340" width="45" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="VtrrNqd6ciy8VGVqEJDb-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+        <mxCell id="JHKX-R4H1pewJYHn4ZbS-8" value="Superuser" style="verticalLabelPosition=bottom;sketch=0;html=1;fillColor=#FF6666;verticalAlign=top;align=center;pointerEvents=1;shape=mxgraph.cisco_safe.design.actor_2;" vertex="1" parent="1">
+          <mxGeometry x="66" y="170" width="50" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="JHKX-R4H1pewJYHn4ZbS-10" value="Melihat informasi cuaca" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="310" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="JHKX-R4H1pewJYHn4ZbS-11" value="Melihat posisi bis" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="440" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="JHKX-R4H1pewJYHn4ZbS-14" value="&lt;font color=&quot;#0d0c0d&quot;&gt;Admin&lt;/font&gt;" style="verticalLabelPosition=bottom;sketch=0;html=1;fillColor=#008a00;verticalAlign=top;align=center;pointerEvents=1;shape=mxgraph.cisco_safe.design.actor_2;strokeColor=#005700;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="72" y="500" width="38" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="JHKX-R4H1pewJYHn4ZbS-24" value="Melihat kualitas udara (kalau ada API-nya bjirr)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="180" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="JHKX-R4H1pewJYHn4ZbS-25" value="Mengatur role" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="70" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="VtrrNqd6ciy8VGVqEJDb-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="460" y="400" width="30" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="JHKX-R4H1pewJYHn4ZbS-3" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
-          <mxGeometry x="230" y="170" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="kC5-Pkg7ZtcA7vL6m25l-2" value="Login" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="360" y="290" width="120" height="50" as="geometry" />
