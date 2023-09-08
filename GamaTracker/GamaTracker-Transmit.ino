@@ -16,7 +16,7 @@ Adafruit_GPS GPS(&GPS_SERIAL);
 #define RF_CE_PIN 9
 #define RF_CS_PIN 10
 #define CHANNEL 21  // Set the desired channel for communication
-RF24 radio(RF_CE_PIN, RF_CS_PIN);
+// RF24 radio(RF_CE_PIN, RF_CS_PIN);
 
 void setup() {
   // Start serial communication for debugging
@@ -28,11 +28,11 @@ void setup() {
   GPS.sendCommand(PMTK_SET_NMEA_UPDATE_1HZ);
   delay(1000);
 
-  // Initialize the NRF24 module
-  radio.begin();
-  radio.openWritingPipe(0xF0F0F0E1E2LL);
-  radio.setPALevel(RF24_PA_HIGH);
-  radio.setChannel(CHANNEL);  // Set the communication channel
+//   // Initialize the NRF24 module
+//   radio.begin();
+//   radio.openWritingPipe(0xF0F0F0E1E2LL);
+//   radio.setPALevel(RF24_PA_HIGH);
+//   radio.setChannel(CHANNEL);  // Set the communication channel
 }
 
 void loop() {
@@ -51,12 +51,12 @@ void loop() {
     // Create a data packet with latitude and longitude
     String dataPacket = String(latitude, 6) + "," + String(longitude, 6);
 
-    // Send the data packet via NRF24
-    radio.stopListening();   // Stop listening to receive mode
-    radio.write(&dataPacket, sizeof(dataPacket));  // Send the data
-    radio.startListening();  // Resume listening mode
+    // // Send the data packet via NRF24
+    // radio.stopListening();   // Stop listening to receive mode
+    // radio.write(&dataPacket, sizeof(dataPacket));  // Send the data
+    // radio.startListening();  // Resume listening mode
 
-    // Print the sent data for debugging
+    // // Print the sent data for debugging
     Serial.println("Data Sent: " + dataPacket);
   }
 }
