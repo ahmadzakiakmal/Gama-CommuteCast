@@ -11,8 +11,8 @@
 TinyGPSPlus gps;
 
 // NRF24L01-related constants and variables
-#define RF_CE_PIN 36
-#define RF_CS_PIN 39
+#define RF_CE_PIN 33
+#define RF_CS_PIN 32
 #define CHANNEL 21
 RF24 radio(RF_CE_PIN, RF_CS_PIN);
 
@@ -28,11 +28,13 @@ void setup() {
   radio.openWritingPipe(0xF0F0F0E1E2LL);
   radio.setPALevel(RF24_PA_HIGH);
   radio.setChannel(CHANNEL);
+
+  Serial.println("Transmitter...");
 }
 
 void loop() {
   // Check if data is available from the GPS module (Serial2)
-  while (GPS_SERIAL.available() > 0) {
+  while(GPS_SERIAL.available() > 0) {
     char c = GPS_SERIAL.read();
 
     // Feed the GPS data to the TinyGPS++ library
@@ -55,6 +57,7 @@ void loop() {
       radio.stopListening();
       radio.write(&dataPacket, sizeof(dataPacket));
       radio.startListening();
+      Serial.println("Data Sent: " + dataPacket);
     }
   }
 }
