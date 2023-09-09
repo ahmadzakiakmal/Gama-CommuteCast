@@ -45,10 +45,10 @@ void loop() {
       float longitude = gps.location.lng();
 
       // Print latitude and longitude for debugging
-      Serial.print("Latitude: ");
-      Serial.println(latitude, 6);
-      Serial.print("Longitude: ");
-      Serial.println(longitude, 6);
+      // Serial.print("Latitude: ");
+      // Serial.println(latitude, 6);
+      // Serial.print("Longitude: ");
+      // Serial.println(longitude, 6);
 
       // NRF24L01 Data Transmission
       String dataPacket = String(latitude, 6) + "," + String(longitude, 6);
