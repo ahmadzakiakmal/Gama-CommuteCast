@@ -4,3 +4,4 @@
 ## Activity Diagram
 
 ## Class Diagram
+![](https://raw.githubusercontent.com/ahmadzaki2975/Gama-CommuteCast/main/Class%20Diagram.jpg)
