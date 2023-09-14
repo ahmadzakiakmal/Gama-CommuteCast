@@ -11,3 +11,12 @@ Ketua Kelompok: Giga Hidjrika Aura Adkhy - 21/479228/TK/52833
 Anggota 1: Ahmad Zaki Akmal - 21/480179/TK/52981
 
 Anggota 2: Anisa Bintang Maharani - 21/478671/TK/52746
+
+## Diagrams
+### Use Case Diagram
+![](https://raw.githubusercontent.com/ahmadzaki2975/Gama-CommuteCast/main/Use%20Case%20Diagram.jpg)
+
+### Class Diagram
+![](https://raw.githubusercontent.com/ahmadzaki2975/Gama-CommuteCast/main/Class%20Diagram.jpg)
+
+### Activity Diagram
