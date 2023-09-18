@@ -1,4 +1,4 @@
-![Gama CommuteCast Logo](https://github.com/ahmadzaki2975/Gama-CommuteCast/blob/main/Gama%20Commute%20Cast.png)
+![Gama CommuteCast Logo](https://raw.githubusercontent.com/ahmadzaki2975/Gama-CommuteCast/main/assets/Gama%20Commute%20Cast.png)
 
 # Gama-CommuteCast
 
@@ -14,9 +14,9 @@ Anggota 2: Anisa Bintang Maharani - 21/478671/TK/52746
 
 ## Diagrams
 ### Use Case Diagram
-![](https://raw.githubusercontent.com/ahmadzaki2975/Gama-CommuteCast/main/Use%20Case%20Diagram.jpg)
+![](https://raw.githubusercontent.com/ahmadzaki2975/Gama-CommuteCast/main/assets/Use%20Case%20Diagram.jpg)
 
 ### Class Diagram
-![](https://raw.githubusercontent.com/ahmadzaki2975/Gama-CommuteCast/main/Class%20Diagram.jpg)
+![](https://raw.githubusercontent.com/ahmadzaki2975/Gama-CommuteCast/main/assets/Class%20Diagram.jpg)
 
 ### Activity Diagram
