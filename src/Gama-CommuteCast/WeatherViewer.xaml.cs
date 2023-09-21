@@ -29,21 +29,23 @@ namespace Gama_CommuteCast
 
             // Create and configure a timer to update weather data
             timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(5); // Update every 5 seconds
             timer.Tick += Timer_Tick;
+            timer.Interval = TimeSpan.FromSeconds(3); // Update every 3 seconds
             timer.Start();
         }
         // Function to update weather data each time Timer_Tick is called
         private void Timer_Tick(object sender, EventArgs e)
         {
             // Update Weather Data
-            _weatherData.updateWeatherData();
+            // _weatherData.updateWeatherData();
+            
+            // Set random values for temperature and humidity
+            _weatherData.setTemperature(new Random().Next(16, 40));
+            _weatherData.setHumidity(new Random().Next(70, 100));
 
             // Update your UI with the new values
             temperatureLabel.Content = _weatherData.Temperature.ToString()+"\u00b0";
-            humidityLabel.Content = _weatherData.Humidity.ToString()+"%";
-
-            
+            humidityLabel.Content = _weatherData.Humidity.ToString() + "%";
         }
     }
 }
