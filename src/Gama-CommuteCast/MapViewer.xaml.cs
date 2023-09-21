@@ -16,26 +16,13 @@ using System.Windows.Shapes;
 namespace Gama_CommuteCast
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MapViewer.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MapViewer : Page
     {
-        public MainWindow()
+        public MapViewer()
         {
             InitializeComponent();
-        }
-
-        private void MapBtn_Click(object sender, RoutedEventArgs e)
-        {
-            /* Navigate to MapViewer.xaml */
-            MainFrame.Navigate(new MapViewer());
-
-
-        }
-
-        private void Frame_Navigated(object sender, NavigationEventArgs e)
-        {
-
         }
     }
 }
