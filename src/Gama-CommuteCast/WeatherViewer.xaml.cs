@@ -20,6 +20,7 @@ namespace Gama_CommuteCast
     /// </summary>
     public partial class WeatherViewer : Page
     {
+        
         public WeatherViewer()
         {
             InitializeComponent();
