@@ -10,7 +10,7 @@
     d:DesignWidth="800"
     mc:Ignorable="d">
 
-    <Grid>
+    <Grid Margin="10,0,-10,0">
         <Label
             Margin="0,0,0,55"
             HorizontalAlignment="Center"
@@ -21,18 +21,18 @@
             FontSize="24" />
         <Label
             x:Name="temperatureLabel"
-            Margin="-120,35,0,0"
+            Margin="-237,30,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Content="0°"
+            Content="Temp: 0°"
             FontSize="36"
             RenderTransformOrigin="1.127,0.957" />
         <Label
             x:Name="humidityLabel"
-            Margin="130,35,0,0"
+            Margin="168,30,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Content="0%"
+            Content="Humidity: 0%"
             FontSize="36" />
 
     </Grid>

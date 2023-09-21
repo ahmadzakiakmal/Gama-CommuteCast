@@ -44,8 +44,8 @@ namespace Gama_CommuteCast
             _weatherData.setHumidity(new Random().Next(70, 100));
 
             // Update your UI with the new values
-            temperatureLabel.Content = "Temp:" + _weatherData.Temperature.ToString() + "\u00b0";
-            humidityLabel.Content = "Humidity:" + _weatherData.Humidity.ToString() + "%";
+            temperatureLabel.Content = "Temp: " + _weatherData.Temperature.ToString() + "\u00b0";
+            humidityLabel.Content = "Humidity: " + _weatherData.Humidity.ToString() + "%";
         }
     }
 }
