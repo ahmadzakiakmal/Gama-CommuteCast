@@ -29,8 +29,6 @@ namespace Gama_CommuteCast
         {
             /* Navigate to MapViewer.xaml */
             MainFrame.Navigate(new MapViewer());
-
-
         }
 
         private void AirPollutionBtn_Click(object sender, RoutedEventArgs e)
