@@ -43,5 +43,11 @@ namespace Gama_CommuteCast
             MainFrame.Navigate(new WeatherViewer());
         }
 
+        private void UserBtn_Click(object sender, RoutedEventArgs e)
+        {
+            /* Navigate to UserViewer.xaml */
+            /*MainFrame.Navigate(new UserViewer());*/
+        }
+
     }
 }

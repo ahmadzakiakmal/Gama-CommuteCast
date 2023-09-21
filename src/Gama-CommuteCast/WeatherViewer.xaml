@@ -12,12 +12,28 @@
 
     <Grid>
         <Label
+            Margin="0,0,0,55"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             HorizontalContentAlignment="Center"
             VerticalContentAlignment="Center"
             Content="Weather Info Here"
             FontSize="24" />
+        <Label
+            x:Name="temperatureLabel"
+            Margin="-120,35,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Content="0°"
+            FontSize="36"
+            RenderTransformOrigin="1.127,0.957" />
+        <Label
+            x:Name="humidityLabel"
+            Margin="130,35,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Content="0%"
+            FontSize="36" />
 
     </Grid>
 </Page>
