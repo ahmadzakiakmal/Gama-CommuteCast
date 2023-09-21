@@ -33,9 +33,17 @@ namespace Gama_CommuteCast
 
         }
 
-        private void Frame_Navigated(object sender, NavigationEventArgs e)
+        private void AirPollutionBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            /* Navigate to AirPollutionViewer.xaml */
+            MainFrame.Navigate(new AirPollutionViewer());
         }
+
+        private void WeatherBtn_Click(object sender, RoutedEventArgs e)
+        {
+            /* Navigate to WeatherViewer.xaml */
+            MainFrame.Navigate(new WeatherViewer());
+        }
+
     }
 }

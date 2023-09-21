@@ -9,6 +9,8 @@
       Title="MapViewer">
 
     <Grid>
-        
+        <Rectangle HorizontalAlignment="Center" Height="254" Stroke="Black" VerticalAlignment="Center" Width="324"/>
+        <Label Content="Map Here. Coming Soon" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+
     </Grid>
 </Page>

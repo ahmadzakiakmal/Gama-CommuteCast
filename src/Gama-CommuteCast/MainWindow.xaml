@@ -19,11 +19,11 @@
             FontSize="48" />
         <Button
             Width="156"
-            Height="119"
-            Margin="130,198,0,0"
+            Height="46"
+            Margin="124,163,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Click="Button_Click"
+            Click="MapBtn_Click"
             Content="Map Check"
             FontSize="18">
             <Button.Effect>
@@ -32,11 +32,11 @@
         </Button>
         <Button
             Width="156"
-            Height="119"
-            Margin="0,198,0,0"
+            Height="46"
+            Margin="0,163,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Click="Button_Click"
+            Click="AirPollutionBtn_Click"
             Content="Air Pollution Check"
             FontSize="18">
             <Button.Effect>
@@ -45,11 +45,11 @@
         </Button>
         <Button
             Width="156"
-            Height="119"
-            Margin="520,198,0,0"
+            Height="46"
+            Margin="532,163,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Click="Button_Click"
+            Click="WeatherBtn_Click"
             Content="Weather Check"
             FontSize="18">
             <Button.Effect>
@@ -63,6 +63,12 @@
             Content="Alpha Version"
             FontSize="20"
             FontStyle="Italic" />
+        <Frame
+            x:Name="MainFrame"
+            Margin="112,247,112,10"
+            Content="Frame here"
+            HorizontalContentAlignment="Center"
+            NavigationUIVisibility="Hidden" />
 
     </Grid>
 </Window>
