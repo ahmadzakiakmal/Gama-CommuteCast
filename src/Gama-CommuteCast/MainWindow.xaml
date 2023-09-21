@@ -66,8 +66,8 @@
         <Frame
             x:Name="MainFrame"
             Margin="112,247,112,10"
-            Content="Frame here"
             HorizontalContentAlignment="Center"
+            Content="Frame here"
             NavigationUIVisibility="Hidden" />
 
     </Grid>
