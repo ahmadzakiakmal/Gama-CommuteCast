@@ -63,6 +63,9 @@ namespace Gama_CommuteCast
         public MapViewer()
         {
             InitializeComponent();
+            
+            openStreetMap.Navigate(new Uri("https://www.openstreetmap.org"));
+
         }
 
         public void updateMapData()
