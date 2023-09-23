@@ -5,40 +5,20 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Gama_CommuteCast"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:windowsPresentation="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation"
     Title="MapViewer"
-    d:DesignHeight="450"
-    d:DesignWidth="800"
+    d:DesignHeight="579.519"
+    d:DesignWidth="1243.618"
     mc:Ignorable="d">
 
-    <Grid
-        Margin="-112.7,0,0,0"
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center">
-        <Rectangle
-            Width="324"
-            Height="254"
-            Margin="0,10,0,0"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            Stroke="Black" />
+    <Grid>
         <Label
-            Margin="0,36,0,0"
+            Margin="0,20,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             Content="Map Here. Coming Soon"
             FontSize="18" />
-        <WebBrowser
-            x:Name="openStreetMap"
-            Margin="307,75,309,225"
-            RenderTransformOrigin="0.5,0.5">
-            <WebBrowser.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform />
-                    <RotateTransform Angle="0" />
-                    <TranslateTransform />
-                </TransformGroup>
-            </WebBrowser.RenderTransform>
-        </WebBrowser>
+
+        <windowsPresentation:GMapControl x:Name="gmapControl" Margin="0,0,1244,545" />
     </Grid>
 </Page>

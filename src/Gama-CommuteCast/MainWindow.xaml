@@ -9,20 +9,33 @@
     Width="800"
     Height="450"
     mc:Ignorable="d">
-    <Grid>
+    <Grid ScrollViewer.HorizontalScrollBarVisibility="Visible">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="0.5*" />
+        </Grid.ColumnDefinitions>
         <Label
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
             Margin="0,51,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             Content="Gama Commutecast"
             FontFamily="Impact"
-            FontSize="48" />
+            FontSize="48"
+            Foreground="#FF2140FF" />
         <Button
-            Width="156"
+            Grid.Column="2"
+            Width="174"
             Height="46"
-            Margin="124,163,0,0"
-            HorizontalAlignment="Left"
+            Margin="0,160,0,0"
+            Padding="1,1,1,1"
+            HorizontalAlignment="Center"
             VerticalAlignment="Top"
+            HorizontalContentAlignment="Center"
             Click="MapBtn_Click"
             Content="Map Check"
             FontSize="18">
@@ -31,9 +44,10 @@
             </Button.Effect>
         </Button>
         <Button
+            Grid.Column="3"
             Width="156"
             Height="46"
-            Margin="0,163,0,0"
+            Margin="0,160,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             Click="AirPollutionBtn_Click"
@@ -44,19 +58,20 @@
             </Button.Effect>
         </Button>
         <Button
-            Width="156"
+            Grid.Column="1"
+            Width="180"
             Height="46"
-            Margin="532,163,0,0"
-            HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Click="WeatherBtn_Click"
             Content="Weather Check"
-            FontSize="18">
+            FontSize="18" Margin="0,160,0,0" HorizontalAlignment="Center">
             <Button.Effect>
                 <DropShadowEffect />
             </Button.Effect>
         </Button>
         <Label
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
             Margin="0,104,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
@@ -65,10 +80,12 @@
             FontStyle="Italic" />
         <Frame
             x:Name="MainFrame"
-            Margin="112,247,112,10"
+            Grid.ColumnSpan="5"
+            Margin="10,247,10,10"
             HorizontalContentAlignment="Center"
             Content="Frame here"
-            NavigationUIVisibility="Hidden" />
+            Navigated="MainFrame_Navigated"
+            NavigationUIVisibility="Hidden" Grid.IsSharedSizeScope="True" />
 
     </Grid>
 </Window>

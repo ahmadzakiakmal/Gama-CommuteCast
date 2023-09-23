@@ -49,5 +49,9 @@ namespace Gama_CommuteCast
             /*MainFrame.Navigate(new UserViewer());*/
         }
 
+        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }

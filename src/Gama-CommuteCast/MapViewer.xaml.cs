@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GMap.NET;
+using GMap.NET.MapProviders;
+using GMap.NET.WindowsPresentation;
 
 namespace Gama_CommuteCast
 {
@@ -63,8 +66,13 @@ namespace Gama_CommuteCast
         public MapViewer()
         {
             InitializeComponent();
-            
-            openStreetMap.Navigate(new Uri("https://www.openstreetmap.org"));
+
+            // Set the map provider (OpenStreetMap)
+            gmapControl.MapProvider = GMapProviders.OpenStreetMap;
+
+            // Set the initial map position and zoom level
+            gmapControl.Position = new PointLatLng(52.5200, 13.4050); // Berlin, Germany
+            gmapControl.Zoom = 12;
 
         }
 

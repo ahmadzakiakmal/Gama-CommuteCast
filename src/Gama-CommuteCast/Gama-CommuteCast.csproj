@@ -8,4 +8,15 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="GMap.NET.Core" Version="2.1.7" />
+    <PackageReference Include="GMap.NET.WinPresentation" Version="2.1.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Toolkit.Wpf.UI.Controls">
+      <HintPath>C:\Users\Acer\.nuget\packages\microsoft.toolkit.wpf.ui.controls\6.1.2\lib\netcoreapp3.0\Microsoft.Toolkit.Wpf.UI.Controls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
