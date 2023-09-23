@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO.Ports;
 
 namespace Gama_CommuteCast
 {
@@ -32,6 +33,12 @@ namespace Gama_CommuteCast
         {
             get { return _longitude;}
             set { _longitude = value; }
+        }
+
+        // Methods
+        public void UpdateLocation()
+        {
+
         }
 
     }

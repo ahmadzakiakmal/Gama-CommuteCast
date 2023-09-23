@@ -19,6 +19,7 @@ namespace Gama_CommuteCast
         public WeatherData(int id)
         {
             //! TODO: Complete WeatherData Constructor
+            _id = id;
         }
 
         public void updateWeatherData()

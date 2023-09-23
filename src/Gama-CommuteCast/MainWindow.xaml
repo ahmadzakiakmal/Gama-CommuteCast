@@ -83,7 +83,7 @@
             Grid.ColumnSpan="5"
             Margin="10,247,10,10"
             HorizontalContentAlignment="Center"
-            Content="Frame here"
+            Content=""
             Navigated="MainFrame_Navigated"
             NavigationUIVisibility="Hidden" Grid.IsSharedSizeScope="True" />
 
