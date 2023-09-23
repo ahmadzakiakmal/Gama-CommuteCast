@@ -12,6 +12,7 @@
 
     <Grid>
         <ComboBox
+            x:Name="UnitComboBox"
             Width="120"
             Margin="10,10,0,0"
             HorizontalAlignment="Left"
