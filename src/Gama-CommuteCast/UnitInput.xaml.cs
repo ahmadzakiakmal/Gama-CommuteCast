@@ -27,7 +27,7 @@ namespace Gama_CommuteCast
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if()
+            
         }
     }
 }
