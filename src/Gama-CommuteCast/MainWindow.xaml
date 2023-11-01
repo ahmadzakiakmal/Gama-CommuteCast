@@ -9,6 +9,7 @@
     Width="800"
     Height="450"
     mc:Ignorable="d">
+<<<<<<< Updated upstream
     <Grid ScrollViewer.HorizontalScrollBarVisibility="Visible">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.5*" />
@@ -27,18 +28,37 @@
             FontFamily="Impact"
             FontSize="48"
             Foreground="#FF2140FF" />
+=======
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="769*"/>
+        </Grid.ColumnDefinitions>
+        <Label
+            Margin="167,51,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Gama Commutecast"
+            FontFamily="Impact"
+            FontSize="48" Grid.Column="1" />
+>>>>>>> Stashed changes
         <Button
             Grid.Column="2"
             Width="174"
             Height="46"
+<<<<<<< Updated upstream
             Margin="0,160,0,0"
             Padding="1,1,1,1"
             HorizontalAlignment="Center"
+=======
+            Margin="93,163,0,0"
+            HorizontalAlignment="Left"
+>>>>>>> Stashed changes
             VerticalAlignment="Top"
             HorizontalContentAlignment="Center"
             Click="MapBtn_Click"
             Content="Map Check"
-            FontSize="18">
+            FontSize="18" Grid.Column="1">
             <Button.Effect>
                 <DropShadowEffect />
             </Button.Effect>
@@ -47,12 +67,17 @@
             Grid.Column="3"
             Width="156"
             Height="46"
+<<<<<<< Updated upstream
             Margin="0,160,0,0"
             HorizontalAlignment="Center"
+=======
+            Margin="291,163,0,0"
+            HorizontalAlignment="Left"
+>>>>>>> Stashed changes
             VerticalAlignment="Top"
             Click="AirPollutionBtn_Click"
             Content="Air Pollution Check"
-            FontSize="18">
+            FontSize="18" Grid.Column="1">
             <Button.Effect>
                 <DropShadowEffect />
             </Button.Effect>
@@ -61,25 +86,40 @@
             Grid.Column="1"
             Width="180"
             Height="46"
+<<<<<<< Updated upstream
             VerticalAlignment="Top"
             Click="WeatherBtn_Click"
             Content="Weather Check"
             FontSize="18" Margin="0,160,0,0" HorizontalAlignment="Center">
+=======
+            Margin="501,163,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="WeatherBtn_Click"
+            Content="Weather Check"
+            FontSize="18" Grid.Column="1">
+>>>>>>> Stashed changes
             <Button.Effect>
                 <DropShadowEffect />
             </Button.Effect>
         </Button>
         <Label
+<<<<<<< Updated upstream
             Grid.Column="1"
             Grid.ColumnSpan="3"
             Margin="0,104,0,0"
             HorizontalAlignment="Center"
+=======
+            Margin="304,104,0,0"
+            HorizontalAlignment="Left"
+>>>>>>> Stashed changes
             VerticalAlignment="Top"
             Content="Alpha Version"
             FontSize="20"
-            FontStyle="Italic" />
+            FontStyle="Italic" Grid.Column="1" />
         <Frame
             x:Name="MainFrame"
+<<<<<<< Updated upstream
             Grid.ColumnSpan="5"
             Margin="10,247,10,10"
             HorizontalContentAlignment="Center"
@@ -92,6 +132,12 @@
             </Button.Effect>
         </Button>
 
+=======
+            Margin="81,247,112,10"
+            HorizontalContentAlignment="Center"
+            Content="Frame here"
+            NavigationUIVisibility="Hidden" Grid.Column="1" />
+>>>>>>> Stashed changes
 
     </Grid>
 </Window>
