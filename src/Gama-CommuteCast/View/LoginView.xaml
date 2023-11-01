@@ -16,15 +16,15 @@
     WindowStyle="None"
     mc:Ignorable="d">
 
-    <Border>
+    <Border CornerRadius="20">
         <Border.Background>
-            <ImageBrush ImageSource="/Resources/img/Tayogama-Balairung.jpeg" Stretch="None" />
+            <ImageBrush ImageSource="../Resources/img/Tayogama-Balairung.jpeg" Stretch="None" />
         </Border.Background>
 
         <Border
             Background="{StaticResource UGM-Blue}"
-            BorderThickness="5"
-            CornerRadius="50"
+            BorderThickness="2"
+            CornerRadius="15"
             Opacity="0.95">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
