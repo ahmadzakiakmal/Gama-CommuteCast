@@ -113,12 +113,15 @@ namespace Gama_CommuteCast.View
 
         private void LinkRegister_OnClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Kong garap registernya kong");
+            /*Show Register View*/
+            RegisterView registerView = new RegisterView();
+            registerView.Show();
+            this.Close();
         }
 
         private void LinkReset_OnClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Kong garap resetnya kong");
+            MessageBox.Show("Hubungi Zakong - +62420691234");
         }
     }
 }
