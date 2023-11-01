@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="resources\img\gama-commutecast.png" />
     <None Remove="resources\img\tayogama-balairung.jpeg" />
     <None Remove="resources\img\tayogama-main.jpeg" />
     <None Remove="resources\img\tayogama-road.jpg" />
@@ -33,6 +34,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="resources\img\gama-commutecast.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="resources\img\tayogama-balairung.jpeg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

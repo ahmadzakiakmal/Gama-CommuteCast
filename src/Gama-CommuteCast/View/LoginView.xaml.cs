@@ -44,5 +44,10 @@ namespace Gama_CommuteCast.View
             /*Close the Application*/
             Application.Current.Shutdown();
         }
+
+        private void BtnLogin_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
