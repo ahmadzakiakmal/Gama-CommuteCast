@@ -134,7 +134,7 @@
                         Text="Username" />
 
                     <TextBox
-                        x:Name="txtUsername"
+                        x:Name="tbUsername"
                         Height="30"
                         Margin="0,5,0,0"
                         VerticalContentAlignment="Center"
@@ -157,7 +157,7 @@
                         Text="Password" />
 
                     <PasswordBox
-                        x:Name="txtPassword"
+                        x:Name="tbPassword"
                         Height="30"
                         Margin="0,5,0,0"
                         VerticalContentAlignment="Center"
