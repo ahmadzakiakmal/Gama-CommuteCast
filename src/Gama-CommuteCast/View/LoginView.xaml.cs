@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Npgsql;
 
 namespace Gama_CommuteCast.View
 {
@@ -19,8 +20,14 @@ namespace Gama_CommuteCast.View
     /// </summary>
     public partial class LoginView : Window
     {
+        private NpgsqlConnection conn;
+        string connString = "Host=20.231.106.166;Port=5432;Username=postgres;Password=kemong;Database=postgres";
+        string query = "";
+        NpgsqlCommand cmd;
+
         public LoginView()
         {
+            conn = new NpgsqlConnection(connString);
             InitializeComponent();
         }
 
@@ -48,22 +55,22 @@ namespace Gama_CommuteCast.View
         private void BtnLogin_OnClick(object sender, RoutedEventArgs e)
         {
             /* Get Login Information */
-            string id = txtUsername.Text;
-            string password = txtPassword.Password;
-            if (string.IsNullOrEmpty(id))
+            string usernameInput = tbUsername.Text;
+            string passwordInput = tbPassword.Password;
+            if (string.IsNullOrEmpty(usernameInput))
             {
-                MessageBox.Show("Mas mas ID-nya mas");
+                MessageBox.Show("Mas mas usernamenya mas");
                 return;
             }
 
-            if (string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(passwordInput))
             {
                 MessageBox.Show("Mas mas passwordnya mas");
                 return;
             }
 
             /* Check Login Information */
-            if (id == "admin" && password == "admin")
+            if (usernameInput == "admin" && passwordInput == "admin")
             {
                 /* Navigate to Main Window */
                 MainWindow mainWindow = new MainWindow();
@@ -71,8 +78,36 @@ namespace Gama_CommuteCast.View
                 this.Close();
             }
             else
-            {
-                MessageBox.Show("Kong garap loginnya kong");
+            { 
+                try
+                {
+                    conn.Open();
+                    query = $"select login_user('{usernameInput}', '{passwordInput}')";
+                    cmd = new NpgsqlCommand(query, conn);
+                    if ((int)cmd.ExecuteScalar() == 500)
+                    {
+                        throw new Exception("[500] An internal server error occured.");
+                    }
+                    if((int)cmd.ExecuteScalar() == 401)
+                    {
+                        throw new Exception("[401] Wrong password.");
+                    }
+                    if((int)cmd.ExecuteScalar() == 404)
+                    {
+                        throw new Exception("[404] User doesn't exist.");
+                    }
+                    conn.Close();
+                    MessageBox.Show("Success");
+                    /* Navigate to Main Window */
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+                    this.Close();
+                } 
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    conn.Close();
+                }
             }
         }
 
