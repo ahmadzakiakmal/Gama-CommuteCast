@@ -47,6 +47,33 @@ namespace Gama_CommuteCast.View
 
         private void BtnLogin_OnClick(object sender, RoutedEventArgs e)
         {
+            /* Get Login Information */
+            string id = txtUsername.Text;
+            string password = txtPassword.Password;
+            if (string.IsNullOrEmpty(id))
+            {
+                MessageBox.Show("Mas mas ID-nya mas");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Mas mas passwordnya mas");
+                return;
+            }
+
+            /* Check Login Information */
+            if (id == "admin" && password == "admin")
+            {
+                /* Navigate to Main Window */
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Apcb");
+            }
             MessageBox.Show("Zakong Login");
         }
     }

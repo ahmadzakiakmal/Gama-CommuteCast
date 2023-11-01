@@ -62,9 +62,9 @@
                         BorderThickness="0"
                         Click="BtnMinimize_OnClick"
                         Content="-"
+                        Cursor="Hand"
                         FontFamily="Montserrat"
                         FontSize="20"
-                        Cursor="Hand"
                         Foreground="{StaticResource UGM-White}">
 
                         <Button.Template>
@@ -72,11 +72,9 @@
                                 <Border
                                     Width="18"
                                     Height="18"
-                                    CornerRadius="9"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter
-                                        VerticalAlignment="Top"
-                                        HorizontalAlignment="Center"></ContentPresenter>
+                                    Background="{TemplateBinding Background}"
+                                    CornerRadius="9">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Top" />
                                 </Border>
                             </ControlTemplate>
                         </Button.Template>
@@ -89,43 +87,46 @@
                         BorderThickness="0"
                         Click="BtnClose_OnClick"
                         Content="x"
+                        Cursor="Hand"
                         FontFamily="Montserrat"
                         FontSize="12"
-                        Cursor="Hand"
-                        Foreground="{StaticResource UGM-White}" >
+                        Foreground="{StaticResource UGM-White}">
 
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border
                                     Width="18"
                                     Height="18"
-                                    CornerRadius="9"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter
-                                        VerticalAlignment="Center"
-                                        HorizontalAlignment="Center"></ContentPresenter>
+                                    Background="{TemplateBinding Background}"
+                                    CornerRadius="9">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                                 </Border>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
                 </Grid>
 
-                <StackPanel Width="450"
-                            Grid.Row="2"
-                            Orientation="Vertical"
-                            Margin="0 35 0 0 ">
-                    <Image Source="/resources/img/gama-commutecast.png" Width="250" Height="100" />
-                    
-                    <TextBlock Margin="0 10 0 0"
-                               FontFamily="Montserrat"
-                               FontSize="13"
-                               FontStyle="Italic"
-                               HorizontalAlignment="Center"
-                               Foreground="{StaticResource UGM-White}"
-                               Text="Locally Rooted, Digitally Tracked."></TextBlock>
+                <StackPanel
+                    Grid.Row="2"
+                    Width="450"
+                    Margin="0,35,0,0"
+                    Orientation="Vertical">
+                    <Image
+                        Width="250"
+                        Height="100"
+                        Source="/resources/img/gama-commutecast.png" />
 
                     <TextBlock
-                        Margin="0 20 0 0"
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center"
+                        FontFamily="Montserrat"
+                        FontSize="13"
+                        FontStyle="Italic"
+                        Foreground="{StaticResource UGM-White}"
+                        Text="Locally Rooted, Digitally Tracked." />
+
+                    <TextBlock
+                        Margin="0,20,0,0"
                         FontFamily="Montserrat"
                         FontSize="15"
                         FontWeight="Normal"
@@ -133,22 +134,22 @@
                         Text="Username" />
 
                     <TextBox
-                        x:Name="xtUsername"
-                        FontFamily="Montserrat"
-                        FontSize="15"
+                        x:Name="txtUsername"
                         Height="30"
-                        Foreground="{StaticResource UGM-White}"
+                        Margin="0,5,0,0"
+                        VerticalContentAlignment="Center"
                         Background="{StaticResource UGM-Blue}"
                         BorderBrush="{StaticResource UGM-White}"
+                        BorderThickness="0,0,0,1"
                         CaretBrush="{StaticResource UGM-White}"
-                        BorderThickness="0 0 0 1"
-                        Margin="0 5 0 0"
-                        VerticalContentAlignment="Center"
                         Cursor="IBeam"
+                        FontFamily="Montserrat"
+                        FontSize="15"
+                        Foreground="{StaticResource UGM-White}"
                         Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" />
 
                     <TextBlock
-                        Margin="0 20 0 0"
+                        Margin="0,20,0,0"
                         FontFamily="Montserrat"
                         FontSize="15"
                         FontWeight="Normal"
@@ -156,38 +157,39 @@
                         Text="Password" />
 
                     <PasswordBox
-                        x:Name="xtPassword"
-                        FontFamily="Montserrat"
-                        FontSize="15"
+                        x:Name="txtPassword"
                         Height="30"
-                        Foreground="{StaticResource UGM-White}"
+                        Margin="0,5,0,0"
+                        VerticalContentAlignment="Center"
                         Background="{StaticResource UGM-Blue}"
                         BorderBrush="{StaticResource UGM-White}"
+                        BorderThickness="0,0,0,1"
                         CaretBrush="{StaticResource UGM-White}"
-                        BorderThickness="0 0 0 1"
-                        Margin="0 5 0 0"
                         Cursor="IBeam"
-                        VerticalContentAlignment="Center"/>
+                        FontFamily="Montserrat"
+                        FontSize="15"
+                        Foreground="{StaticResource UGM-White}" />
 
                     <Button
                         x:Name="btnLogin"
+                        Margin="0,50,0,0"
+                        Padding="0,10,0,0"
                         BorderThickness="0"
                         Click="BtnLogin_OnClick"
                         Content="Login"
+                        Cursor="Hand"
                         FontFamily="Montserrat"
                         FontSize="20"
-                        Cursor="Hand"
-                        Padding="0 10 0 0"
-                        Margin="0 50 0 0">
+                        FontWeight="Bold">
 
                         <Button.Style>
                             <Style TargetType="Button">
-                                <Setter Property="Background" Value="{StaticResource UGM-Yellow}"></Setter>
-                                <Setter Property="Foreground" Value="{StaticResource UGM-White}"></Setter>
+                                <Setter Property="Background" Value="{StaticResource UGM-Yellow}" />
+                                <Setter Property="Foreground" Value="{StaticResource UGM-White}" />
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="{StaticResource UGM-White}"></Setter>
-                                        <Setter Property="Foreground" Value="{StaticResource UGM-Yellow}"></Setter>
+                                        <Setter Property="Background" Value="{StaticResource UGM-White}" />
+                                        <Setter Property="Foreground" Value="{StaticResource UGM-Yellow}" />
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
@@ -198,33 +200,39 @@
                                 <Border
                                     Width="Auto"
                                     Height="50"
-                                    CornerRadius="5"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter
-                                        VerticalAlignment="Center"
-                                        HorizontalAlignment="Center"></ContentPresenter>
+                                    Background="{TemplateBinding Background}"
+                                    CornerRadius="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                                 </Border>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
 
-                    <TextBlock Text="Forgot Password?"
-                               Foreground="{StaticResource UGM-White}"
-                               FontSize="12"
-                               FontFamily="Montserrat"
-                               HorizontalAlignment="Center"
-                               Margin="0 15 0 0"
-                               Cursor="Hand"
-                               ></TextBlock>
+                    <StackPanel
+                        Margin="0,20,0,0"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                        <TextBlock
+                            Margin="0,0,50,0"
+                            HorizontalAlignment="Center"
+                            Cursor="Hand"
+                            FontFamily="Montserrat"
+                            FontSize="13"
+                            FontStyle="Italic"
+                            Foreground="{StaticResource UGM-White}"
+                            Text="Forgot Password?" />
 
-                    <TextBlock Text="Don't have an account?"
-                                 Foreground="{StaticResource UGM-White}"
-                                 FontSize="12"
-                                 FontFamily="Montserrat"
-                                 HorizontalAlignment="Center"
-                                 Margin="0 5 0 0"
-                                 Cursor="Hand"
-                                 ></TextBlock>
+                        <TextBlock
+                            Margin="50,0,0,0"
+                            HorizontalAlignment="Center"
+                            Cursor="Hand"
+                            FontFamily="Montserrat"
+                            FontSize="13"
+                            FontStyle="Italic"
+                            Foreground="{StaticResource UGM-White}"
+                            Text="Don't have an account?" />
+
+                    </StackPanel>
 
                 </StackPanel>
 
