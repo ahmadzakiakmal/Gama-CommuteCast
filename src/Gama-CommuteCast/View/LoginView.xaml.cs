@@ -78,9 +78,7 @@ namespace Gama_CommuteCast.View
                 this.Close();
             }
             else
-            {
-                MessageBox.Show(usernameInput + " " + passwordInput);
-
+            { 
                 try
                 {
                     conn.Open();
@@ -100,10 +98,13 @@ namespace Gama_CommuteCast.View
                     }
                     conn.Close();
                     MessageBox.Show("Success");
+                    /* Navigate to Main Window */
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+                    this.Close();
                 } 
                 catch (Exception ex)
                 {
-                    //MessageBox.Show((string)cmd.ExecuteScalar());
                     MessageBox.Show(ex.Message);
                     conn.Close();
                 }
