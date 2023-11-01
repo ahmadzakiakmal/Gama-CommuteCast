@@ -128,7 +128,7 @@
                         FontSize="15"
                         FontWeight="Normal"
                         Foreground="{StaticResource UGM-White}"
-                        Text="Username" />
+                        Text="Username"/>
 
                     <TextBox
                         x:Name="txtUsername"
@@ -143,7 +143,8 @@
                         FontFamily="Montserrat"
                         FontSize="15"
                         Foreground="{StaticResource UGM-White}"
-                        Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" />
+                        Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
+                        TextChanged="TxtUsername_OnTextChanged"/>
 
                     <TextBlock
                         Margin="0,20,0,0"
