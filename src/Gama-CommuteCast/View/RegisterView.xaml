@@ -1,11 +1,11 @@
 ﻿<Window
-    x:Class="Gama_CommuteCast.View.LoginView"
+    x:Class="Gama_CommuteCast.View.RegisterView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Gama_CommuteCast.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="LoginView"
+    Title="RegisterView"
     Width="800"
     Height="550"
     AllowsTransparency="True"
@@ -53,7 +53,7 @@
                         FontFamily="Montserrat"
                         FontSize="15"
                         Foreground="{StaticResource UGM-White}"
-                        Text="Login - Gama Commutecast"/>
+                        Text="Register - Gama Commutecast" />
 
                     <Button
                         x:Name="btnMinimize"
@@ -109,21 +109,18 @@
                 <StackPanel
                     Grid.Row="2"
                     Width="450"
-                    Margin="0,35,0,0"
+                    Margin="0,25,0,0"
                     Orientation="Vertical">
-                    <Image
-                        Width="250"
-                        Height="100"
-                        Source="/resources/img/gama-commutecast.png" />
 
                     <TextBlock
                         Margin="0,10,0,0"
                         HorizontalAlignment="Center"
                         FontFamily="Montserrat"
-                        FontSize="13"
+                        FontSize="24"
                         FontStyle="Italic"
+                        FontWeight="Bold"
                         Foreground="{StaticResource UGM-White}"
-                        Text="Locally Rooted, Digitally Tracked." />
+                        Text="Register" />
 
                     <TextBlock
                         Margin="0,30,0,0"
@@ -154,10 +151,54 @@
                         FontSize="15"
                         FontWeight="Normal"
                         Foreground="{StaticResource UGM-White}"
+                        Text="Email" />
+
+                    <TextBox
+                        x:Name="txtEmail"
+                        Height="30"
+                        Margin="0,5,0,0"
+                        VerticalContentAlignment="Center"
+                        Background="{StaticResource UGM-Blue}"
+                        BorderBrush="{StaticResource UGM-White}"
+                        BorderThickness="0,0,0,1"
+                        CaretBrush="{StaticResource UGM-White}"
+                        Cursor="IBeam"
+                        FontFamily="Montserrat"
+                        FontSize="15"
+                        Foreground="{StaticResource UGM-White}" />
+
+                    <TextBlock
+                        Margin="0,20,0,0"
+                        FontFamily="Montserrat"
+                        FontSize="15"
+                        FontWeight="Normal"
+                        Foreground="{StaticResource UGM-White}"
                         Text="Password" />
 
                     <PasswordBox
                         x:Name="txtPassword"
+                        Height="30"
+                        Margin="0,5,0,0"
+                        VerticalContentAlignment="Center"
+                        Background="{StaticResource UGM-Blue}"
+                        BorderBrush="{StaticResource UGM-White}"
+                        BorderThickness="0,0,0,1"
+                        CaretBrush="{StaticResource UGM-White}"
+                        Cursor="IBeam"
+                        FontFamily="Montserrat"
+                        FontSize="15"
+                        Foreground="{StaticResource UGM-White}" />
+
+                    <TextBlock
+                        Margin="0,20,0,0"
+                        FontFamily="Montserrat"
+                        FontSize="15"
+                        FontWeight="Normal"
+                        Foreground="{StaticResource UGM-White}"
+                        Text="Confirm Password" />
+
+                    <PasswordBox
+                        x:Name="txtConfirmPassword"
                         Height="30"
                         Margin="0,5,0,0"
                         VerticalContentAlignment="Center"
@@ -176,7 +217,7 @@
                         Padding="0,10,0,0"
                         BorderThickness="0"
                         Click="BtnLogin_OnClick"
-                        Content="Login"
+                        Content="Register"
                         Cursor="Hand"
                         FontFamily="Montserrat"
                         FontSize="20"
@@ -207,46 +248,6 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-
-                    <StackPanel
-                        Margin="0,20,0,0"
-                        HorizontalAlignment="Center"
-                        Orientation="Horizontal">
-                        <TextBlock
-                            Margin="0,0,50,0"
-                            HorizontalAlignment="Center"
-                            Cursor="Hand"
-                            FontFamily="Montserrat"
-                            FontSize="13"
-                            FontStyle="Italic"
-                            Foreground="{StaticResource UGM-White}">
-                            <Hyperlink
-                                x:Name="linkReset"
-                                Click="LinkReset_OnClick"
-                                Foreground="{StaticResource UGM-White}"
-                                TextDecorations="None">
-                                Forgot your password?
-                            </Hyperlink>
-                        </TextBlock>
-
-                        <TextBlock
-                            Margin="50,0,0,0"
-                            HorizontalAlignment="Center"
-                            Cursor="Hand"
-                            FontFamily="Montserrat"
-                            FontSize="13"
-                            FontStyle="Italic"
-                            Foreground="{StaticResource UGM-White}">
-                            <Hyperlink
-                                x:Name="linkRegister"
-                                Click="LinkRegister_OnClick"
-                                Foreground="{StaticResource UGM-White}"
-                                TextDecorations="None">
-                                Don't have an account?
-                            </Hyperlink>
-                        </TextBlock>
-
-                    </StackPanel>
 
                 </StackPanel>
 
