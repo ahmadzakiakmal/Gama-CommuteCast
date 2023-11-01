@@ -52,5 +52,13 @@ namespace Gama_CommuteCast
         {
 
         }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            // Change window to login window
+            LoginWindow loginWindow = new LoginWindow();
+            loginWindow.Show();
+            this.Close();
+        }
     }
 }

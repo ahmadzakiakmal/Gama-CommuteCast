@@ -86,6 +86,12 @@
             Content=""
             Navigated="MainFrame_Navigated"
             NavigationUIVisibility="Hidden" Grid.IsSharedSizeScope="True" />
+        <Button x:Name="btnLogin" Grid.Column="3" Content="Login" HorizontalAlignment="Left" Margin="182,36,0,0" VerticalAlignment="Top" Height="49" Width="68" Grid.ColumnSpan="2" Click="btnLogin_Click">
+            <Button.Effect>
+                <DropShadowEffect />
+            </Button.Effect>
+        </Button>
+
 
     </Grid>
 </Window>

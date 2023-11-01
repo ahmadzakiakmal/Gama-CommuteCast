@@ -20,5 +20,29 @@
             FontSize="18" />
 
         <windowsPresentation:GMapControl x:Name="gmapControl" Margin="0,0,1244,545" />
+        <Button x:Name="btnMap" Content="Map" HorizontalAlignment="Left" Height="34" Margin="36,20,0,0" VerticalAlignment="Top" Width="117" Background="#FF5DD6DA" FontWeight="Bold" FontSize="14" Click="ButtonMap_Click"/>
+        <Button x:Name="btnSatellite" Content="Satellite" HorizontalAlignment="Right" Height="34" Margin="0,20,977,0" VerticalAlignment="Top" Width="117" Background="#FF5DD6DA" FontWeight="Bold" FontSize="14" Click="ButtonSatellite_Click"/>
+        <Button x:Name="btnZoomIn" Content="+" Height="45" Margin="1158,0,41,93" FontSize="24" FontWeight="Bold" Foreground="White" Background="#FF1C4797" VerticalAlignment="Bottom" RenderTransformOrigin="-2.747,-3.299" BorderBrush="#FFFDFAFA" Width="45" Click="ButtonZoomIn_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.201"/>
+                    <TranslateTransform X="-0.6" Y="0.514"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnZoomOut" Content="-" Height="45" Margin="1158,0,41,39" FontSize="24" Foreground="White" Background="#FF1C4797" VerticalAlignment="Bottom" RenderTransformOrigin="-2.747,-3.299" BorderBrush="#FFFDFAFA" Width="45" FontWeight="Bold" Click="ButtonZoomOut_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.201"/>
+                    <TranslateTransform X="-0.6" Y="0.514"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnTypeABus" Content="Type A Bus" HorizontalAlignment="Left" Height="37" Margin="36,444,0,0" VerticalAlignment="Top" Width="149" Click="ButtonTypeABus_Click" Background="#FF0F74DC" BorderBrush="White" Foreground="White" FontSize="16" FontWeight="Bold"/>
+        <Button x:Name="btnTypeBBus" Content="Type B Bus" HorizontalAlignment="Left" Height="37" Margin="36,492,0,0" VerticalAlignment="Top" Width="149" Click="ButtonTypeBBus_Click" Background="#FF0F74DC" BorderBrush="White" Foreground="White" FontSize="16" FontWeight="Bold"/>
     </Grid>
 </Page>

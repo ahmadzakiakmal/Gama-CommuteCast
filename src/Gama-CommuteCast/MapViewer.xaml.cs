@@ -87,5 +87,36 @@ namespace Gama_CommuteCast
                 }
             }
         }
+
+        private void ButtonSatellite_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void ButtonMap_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonZoomOut_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonZoomIn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonTypeABus_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonTypeBBus_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
