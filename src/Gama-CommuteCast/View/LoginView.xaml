@@ -1,12 +1,38 @@
-﻿<Window x:Class="Gama_CommuteCast.View.LoginView"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Gama_CommuteCast.View"
-        mc:Ignorable="d"
-        Title="LoginView" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+﻿<Window
+    x:Class="Gama_CommuteCast.View.LoginView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Gama_CommuteCast.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="LoginView"
+    Width="800"
+    Height="550"
+    AllowsTransparency="True"
+    Background="Transparent"
+    MouseDown="Window_MouseDown"
+    ResizeMode="CanMinimize"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+
+    <Border>
+        <Border.Background>
+            <ImageBrush ImageSource="/Resources/img/Tayogama-Balairung.jpeg" Stretch="None" />
+        </Border.Background>
+
+        <Border
+            Background="{StaticResource UGM-Blue}"
+            BorderThickness="5"
+            CornerRadius="50"
+            Opacity="0.95">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Offset="0.0" Color="{StaticResource UGM-Color-Blue}" />
+                    <GradientStop Offset="1.0" Color="{StaticResource UGM-Color-Blue}" />
+                    <GradientStop Offset="0.75" Color="{StaticResource UGM-Color-Yellow}" />
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+        </Border>
+    </Border>
 </Window>
