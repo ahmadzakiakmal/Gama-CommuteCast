@@ -59,6 +59,7 @@ namespace Gama_CommuteCast.View
                 MessageBox.Show("Mas mas usernamenya mas");
                 return;
             }
+            txtUsername.BorderBrush = (Brush)FindResource("UGM-White");
 
             if (string.IsNullOrEmpty(emailInput))
             {
@@ -66,6 +67,7 @@ namespace Gama_CommuteCast.View
                 MessageBox.Show("Mas mas emailnya mas");
                 return;
             }   
+            txtEmail.BorderBrush = (Brush)FindResource("UGM-White");
 
             if (string.IsNullOrEmpty(passwordInput))
             {
@@ -73,11 +75,21 @@ namespace Gama_CommuteCast.View
                 MessageBox.Show("Mas mas passwordnya mas");
                 return;
             }
+            txtPassword.BorderBrush = (Brush)FindResource("UGM-White");
 
             if (string.IsNullOrEmpty(confirmPasswordInput))
             {
                 txtConfirmPassword.BorderBrush = Brushes.Red;
                 MessageBox.Show("Mas mas confirm passwordnya mas");
+                return;
+            }
+            txtConfirmPassword.BorderBrush = (Brush)FindResource("UGM-White");
+
+            if (passwordInput != confirmPasswordInput)
+            {
+                txtConfirmPassword.BorderBrush = Brushes.Red;
+                txtPassword.BorderBrush = Brushes.Red;
+                MessageBox.Show("Password does not match! Please try again");
                 return;
             }
 
@@ -87,16 +99,6 @@ namespace Gama_CommuteCast.View
             LoginView loginView = new LoginView();
             loginView.Show();
             this.Close();
-        }
-
-        private void LinkRegister_OnClick(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Kong garap registernya kong");
-        }
-
-        private void LinkReset_OnClick(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Kong garap resetnya kong");
         }
     }
 }
