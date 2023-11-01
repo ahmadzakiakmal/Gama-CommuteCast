@@ -242,7 +242,7 @@
                                 Click="LinkRegister_OnClick"
                                 Foreground="{StaticResource UGM-White}"
                                 TextDecorations="None">
-                                Don't have an account? Register here.
+                                Don't have an account?
                             </Hyperlink>
                         </TextBlock>
 
