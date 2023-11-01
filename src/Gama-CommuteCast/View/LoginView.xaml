@@ -18,7 +18,7 @@
 
     <Border CornerRadius="20">
         <Border.Background>
-            <ImageBrush ImageSource="/resources/img/tayogama-road.jpg" Stretch="UniformToFill" />
+            <ImageBrush ImageSource="/resources/img/tayogama-balairung.jpeg" Stretch="UniformToFill" />
         </Border.Background>
 
         <Border
@@ -33,6 +33,83 @@
                     <GradientStop Offset="0.75" Color="{StaticResource UGM-Color-Yellow}" />
                 </LinearGradientBrush>
             </Border.BorderBrush>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="5" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Margin="20,0,0,0"
+                        VerticalAlignment="Center"
+                        FontFamily="Montserrat"
+                        FontSize="12"
+                        Foreground="{StaticResource UGM-White}"
+                        Text="Login" />
+
+                    <Button
+                        x:Name="btnMinimize"
+                        Grid.Column="1"
+                        Background="Green"
+                        BorderThickness="0"
+                        Click="BtnMinimize_OnClick"
+                        Content="-"
+                        FontFamily="Montserrat"
+                        FontSize="20"
+                        Cursor="Hand"
+                        Foreground="{StaticResource UGM-White}">
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border
+                                    Width="18"
+                                    Height="18"
+                                    CornerRadius="9"
+                                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter
+                                        VerticalAlignment="Top"
+                                        HorizontalAlignment="Center"></ContentPresenter>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button
+                        x:Name="btnClose"
+                        Grid.Column="2"
+                        Background="Red"
+                        BorderThickness="0"
+                        Click="BtnClose_OnClick"
+                        Content="x"
+                        FontFamily="Montserrat"
+                        FontSize="12"
+                        Cursor="Hand"
+                        Foreground="{StaticResource UGM-White}" >
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border
+                                    Width="18"
+                                    Height="18"
+                                    CornerRadius="9"
+                                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"></ContentPresenter>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+            </Grid>
         </Border>
     </Border>
 </Window>

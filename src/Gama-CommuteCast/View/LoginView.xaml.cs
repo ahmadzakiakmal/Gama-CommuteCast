@@ -32,5 +32,17 @@ namespace Gama_CommuteCast.View
                 DragMove();
             }
         }
+
+        private void BtnMinimize_OnClick(object sender, RoutedEventArgs e)
+        {
+            /*Minimize the window*/
+            WindowState = WindowState.Minimized;
+        }
+
+        private void BtnClose_OnClick(object sender, RoutedEventArgs e)
+        {
+            /*Close the Application*/
+            Application.Current.Shutdown();
+        }
     }
 }
