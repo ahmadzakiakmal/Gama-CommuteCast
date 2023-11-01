@@ -51,9 +51,9 @@
                         Margin="20,0,0,0"
                         VerticalAlignment="Center"
                         FontFamily="Montserrat"
-                        FontSize="12"
+                        FontSize="15"
                         Foreground="{StaticResource UGM-White}"
-                        Text="Login" />
+                        Text="Login - Gama Commutecast" />
 
                     <Button
                         x:Name="btnMinimize"
@@ -126,7 +126,7 @@
                         Text="Locally Rooted, Digitally Tracked." />
 
                     <TextBlock
-                        Margin="0,20,0,0"
+                        Margin="0,30,0,0"
                         FontFamily="Montserrat"
                         FontSize="15"
                         FontWeight="Normal"
@@ -219,8 +219,15 @@
                             FontFamily="Montserrat"
                             FontSize="13"
                             FontStyle="Italic"
-                            Foreground="{StaticResource UGM-White}"
-                            Text="Forgot Password?" />
+                            Foreground="{StaticResource UGM-White}">
+                            <Hyperlink
+                                x:Name="linkReset"
+                                Click="LinkReset_OnClick"
+                                Foreground="{StaticResource UGM-White}"
+                                TextDecorations="None">
+                                Forgot your password?
+                            </Hyperlink>
+                        </TextBlock>
 
                         <TextBlock
                             Margin="50,0,0,0"
@@ -229,8 +236,15 @@
                             FontFamily="Montserrat"
                             FontSize="13"
                             FontStyle="Italic"
-                            Foreground="{StaticResource UGM-White}"
-                            Text="Don't have an account?" />
+                            Foreground="{StaticResource UGM-White}">
+                            <Hyperlink
+                                x:Name="linkRegister"
+                                Click="LinkRegister_OnClick"
+                                Foreground="{StaticResource UGM-White}"
+                                TextDecorations="None">
+                                Don't have an account? Register here.
+                            </Hyperlink>
+                        </TextBlock>
 
                     </StackPanel>
 

@@ -72,9 +72,18 @@ namespace Gama_CommuteCast.View
             }
             else
             {
-                MessageBox.Show("Apcb");
+                MessageBox.Show("Kong garap loginnya kong");
             }
-            MessageBox.Show("Zakong Login");
+        }
+
+        private void LinkRegister_OnClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Kong garap registernya kong");
+        }
+
+        private void LinkReset_OnClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Kong garap resetnya kong");
         }
     }
 }
