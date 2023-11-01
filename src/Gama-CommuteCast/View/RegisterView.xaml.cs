@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Gama_CommuteCast.View
 {
     /// <summary>
-    /// Interaction logic for LoginView.xaml
+    /// Interaction logic for RegisterView.xaml
     /// </summary>
-    public partial class LoginView : Window
+    public partial class RegisterView : Window
     {
-        public LoginView()
+        public RegisterView()
         {
             InitializeComponent();
         }
@@ -48,32 +48,45 @@ namespace Gama_CommuteCast.View
         private void BtnLogin_OnClick(object sender, RoutedEventArgs e)
         {
             /* Get Login Information */
-            string id = txtUsername.Text;
-            string password = txtPassword.Password;
-            if (string.IsNullOrEmpty(id))
+            string usernameInput = txtUsername.Text;
+            string passwordInput = txtPassword.Password;
+            string confirmPasswordInput = txtConfirmPassword.Password;
+            string emailInput = txtEmail.Text;
+
+            if (string.IsNullOrEmpty(usernameInput))
             {
-                MessageBox.Show("Mas mas ID-nya mas");
+                txtUsername.BorderBrush = Brushes.Red;
+                MessageBox.Show("Mas mas usernamenya mas");
                 return;
             }
 
-            if (string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(emailInput))
             {
+                txtEmail.BorderBrush = Brushes.Red;
+                MessageBox.Show("Mas mas emailnya mas");
+                return;
+            }   
+
+            if (string.IsNullOrEmpty(passwordInput))
+            {
+                txtPassword.BorderBrush = Brushes.Red;
                 MessageBox.Show("Mas mas passwordnya mas");
                 return;
             }
 
-            /* Check Login Information */
-            if (id == "admin" && password == "admin")
+            if (string.IsNullOrEmpty(confirmPasswordInput))
             {
-                /* Navigate to Main Window */
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
-                this.Close();
+                txtConfirmPassword.BorderBrush = Brushes.Red;
+                MessageBox.Show("Mas mas confirm passwordnya mas");
+                return;
             }
-            else
-            {
-                MessageBox.Show("Kong garap loginnya kong");
-            }
+
+            MessageBox.Show("Registered Successfully!");
+
+            /* Navigate to Login Window */
+            LoginView loginView = new LoginView();
+            loginView.Show();
+            this.Close();
         }
 
         private void LinkRegister_OnClick(object sender, RoutedEventArgs e)
