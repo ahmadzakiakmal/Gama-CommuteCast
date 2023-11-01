@@ -47,7 +47,7 @@ namespace Gama_CommuteCast.View
 
         private void BtnLogin_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            MessageBox.Show("Zakong Login");
         }
     }
 }

@@ -113,7 +113,7 @@
                 <StackPanel Width="450"
                             Grid.Row="2"
                             Orientation="Vertical"
-                            Margin="0 15 0 0 ">
+                            Margin="0 35 0 0 ">
                     <Image Source="/resources/img/gama-commutecast.png" Width="250" Height="100" />
                     
                     <TextBlock Margin="0 10 0 0"
@@ -144,6 +144,7 @@
                         BorderThickness="0 0 0 1"
                         Margin="0 5 0 0"
                         VerticalContentAlignment="Center"
+                        Cursor="IBeam"
                         Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" />
 
                     <TextBlock
@@ -165,6 +166,7 @@
                         CaretBrush="{StaticResource UGM-White}"
                         BorderThickness="0 0 0 1"
                         Margin="0 5 0 0"
+                        Cursor="IBeam"
                         VerticalContentAlignment="Center"/>
 
                     <Button
@@ -176,7 +178,7 @@
                         FontSize="20"
                         Cursor="Hand"
                         Padding="0 10 0 0"
-                        Margin="0 30 0 0">
+                        Margin="0 50 0 0">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -205,6 +207,24 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
+
+                    <TextBlock Text="Forgot Password?"
+                               Foreground="{StaticResource UGM-White}"
+                               FontSize="12"
+                               FontFamily="Montserrat"
+                               HorizontalAlignment="Center"
+                               Margin="0 15 0 0"
+                               Cursor="Hand"
+                               ></TextBlock>
+
+                    <TextBlock Text="Don't have an account?"
+                                 Foreground="{StaticResource UGM-White}"
+                                 FontSize="12"
+                                 FontFamily="Montserrat"
+                                 HorizontalAlignment="Center"
+                                 Margin="0 5 0 0"
+                                 Cursor="Hand"
+                                 ></TextBlock>
 
                 </StackPanel>
 
