@@ -153,5 +153,13 @@ namespace Gama_CommuteCast.View
             reader.Close();*/
             return true;
         }
+
+        private void Hyperlink_OnClick(object sender, RoutedEventArgs e)
+        {
+            /*Navigate to Login Window*/
+            LoginView loginView = new LoginView();
+            loginView.Show();
+            this.Close();
+        }
     }
 }
