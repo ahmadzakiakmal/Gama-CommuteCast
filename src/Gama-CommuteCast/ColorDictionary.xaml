@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="UGM-Blue" Color="#FF004A74" />
+    <SolidColorBrush x:Key="UGM-Yellow" Color="#FFFED400" />
+    <SolidColorBrush x:Key="UGM-White" Color="#FFFCFCFC" />
+
+    <!--  Colors for the UGM logo  -->
+    <Color x:Key="UGM-Color-Blue">#FF004A74</Color>
+    <Color x:Key="UGM-Color-Yellow">#FFFED400</Color>
+    <Color x:Key="UGM-Color-White">#FFFCFCFC</Color>
+
+</ResourceDictionary>
