@@ -213,11 +213,11 @@
                         Foreground="{StaticResource UGM-White}" />
 
                     <Button
-                        x:Name="btnLogin"
+                        x:Name="btnRegister"
                         Margin="0,50,0,0"
                         Padding="0,10,0,0"
                         BorderThickness="0"
-                        Click="BtnLogin_OnClick"
+                        Click="BtnRegister_OnClick"
                         Content="Register"
                         Cursor="Hand"
                         FontFamily="Montserrat"

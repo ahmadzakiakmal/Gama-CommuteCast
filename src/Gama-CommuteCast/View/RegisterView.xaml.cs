@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Npgsql;
 
 namespace Gama_CommuteCast.View
 {
@@ -45,7 +46,7 @@ namespace Gama_CommuteCast.View
             Application.Current.Shutdown();
         }
 
-        private void BtnLogin_OnClick(object sender, RoutedEventArgs e)
+        private void BtnRegister_OnClick(object sender, RoutedEventArgs e)
         {
             /* Get Login Information */
             string usernameInput = txtUsername.Text;
@@ -105,12 +106,43 @@ namespace Gama_CommuteCast.View
             txtPassword.BorderThickness = new Thickness(0, 0, 0, 1);
             txtConfirmPassword.BorderThickness = new Thickness(0, 0, 0, 1);
 
-            MessageBox.Show("Registered Successfully!");
+            // Register Logic
+            // Connection string to your PostgreSQL database
+            string connectionString = "Host=20.231.106.166;Port=5432;Username=postgres;Password=kemong;Database=postgres";
 
-            /* Navigate to Login Window */
-            LoginView loginView = new LoginView();
-            loginView.Show();
-            this.Close();
+            // SQL query for user registration
+            string sqlQuery = "INSERT INTO users (username, password, email) VALUES (@username, @password, @email)";
+
+            // Create a new NpgsqlConnection and open it
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // Create a new NpgsqlCommand with the SQL query and the connection
+                using (NpgsqlCommand command = new NpgsqlCommand(sqlQuery, connection))
+                {
+                    // Add parameters to the query
+                    command.Parameters.AddWithValue("@username", usernameInput);
+                    command.Parameters.AddWithValue("@password", passwordInput);
+                    command.Parameters.AddWithValue("@email", emailInput);
+
+                    // Execute the query
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Registration successful.");
+                        /* Navigate to Login Window */
+                        LoginView loginView = new LoginView();
+                        loginView.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Registration failed.");
+                    }
+                }
+            }
         }
 
         private void TxtUsername_OnTextChanged(object sender, TextChangedEventArgs e)
