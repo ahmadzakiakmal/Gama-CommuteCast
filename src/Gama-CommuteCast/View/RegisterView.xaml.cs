@@ -64,6 +64,12 @@ namespace Gama_CommuteCast.View
             //txtUsername.BorderBrush = (Brush)FindResource("UGM-White");
             //txtUsername.BorderThickness = new Thickness(0, 0, 0, 1);
 
+            if (!isUsernameUnique(usernameInput))
+            {
+                MessageBox.Show("Username already exists!");
+                return;
+            }
+
             if (string.IsNullOrEmpty(emailInput))
             {
                 txtEmail.BorderBrush = Brushes.Red;
@@ -72,13 +78,12 @@ namespace Gama_CommuteCast.View
                 return;
             }   
             txtEmail.BorderBrush = (Brush)FindResource("UGM-White");
-            if (string.IsNullOrEmpty(confirmPasswordInput))
 
             if (string.IsNullOrEmpty(passwordInput))
             {
                 txtPassword.BorderBrush = Brushes.Red;
                 txtPassword.BorderThickness = new Thickness(0, 0, 0, 3);
-                    MessageBox.Show("Mas mas passwordnya mas");
+                MessageBox.Show("Mas mas passwordnya mas");
                 return;
             }
             txtPassword.BorderBrush = (Brush)FindResource("UGM-White");
@@ -145,7 +150,7 @@ namespace Gama_CommuteCast.View
             }
         }
 
-        private void TxtUsername_OnTextChanged(object sender, TextChangedEventArgs e)
+        private void TxtUsername_LostFocus(object sender, RoutedEventArgs e)
         {
             // Get the current username from the TextBox
             string usernameInput = txtUsername.Text;
@@ -173,17 +178,25 @@ namespace Gama_CommuteCast.View
         /*Check if Username is Unique everytime user changes the username*/
         private bool isUsernameUnique(string usernameInput)
         {
-            /*
-            string query = "SELECT * FROM users WHERE username = '" + usernameInput + "'";
-            NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
-            NpgsqlDataReader reader = cmd.ExecuteReader();
-            if (reader.HasRows)
+            string connectionString = "Host=20.231.106.166;Port=5432;Username=postgres;Password=kemong;Database=postgres";
+            using (NpgsqlConnection conn = new NpgsqlConnection(connectionString))
             {
-                reader.Close();
-                return false;
+                conn.Open();
+
+                // Create a SQL query that calls the stored procedure
+                string query = "SELECT IsUsernameUnique(@username);";
+
+                // Create a command with parameters
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", usernameInput);
+
+                    // Execute the query and retrieve the result
+                    bool isUnique = (bool)cmd.ExecuteScalar();
+
+                    return isUnique;
+                }
             }
-            reader.Close();*/
-            return true;
         }
 
         private void Hyperlink_OnClick(object sender, RoutedEventArgs e)
@@ -192,6 +205,11 @@ namespace Gama_CommuteCast.View
             LoginView loginView = new LoginView();
             loginView.Show();
             this.Close();
+        }
+
+        private void txtUsername_LostFocus(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

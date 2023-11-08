@@ -144,7 +144,7 @@
                         FontSize="15"
                         Foreground="{StaticResource UGM-White}"
                         Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
-                        TextChanged="TxtUsername_OnTextChanged"/>
+                        LostFocus="TxtUsername_LostFocus"/>
 
                     <TextBlock
                         Margin="0,20,0,0"
