@@ -1,0 +1,19 @@
+﻿<Window x:Class="Gama_CommuteCast.RealMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gama_CommuteCast"
+        mc:Ignorable="d"
+        Title="RealMainWindow" Height="450" Width="800">
+    <Grid>
+            <Button Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <Label Content="Cuaca di Sleman, Yogyakarta" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lb0" Content="00:00, , " HorizontalAlignment="Left" Margin="12,66,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lb6" Content="06:00, , " HorizontalAlignment="Left" Margin="12,92,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lb12" Content="12:00, , " HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lb18" Content="18:00, , " HorizontalAlignment="Left" Margin="12,144,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+
+
+    </Grid>
+</Window>
