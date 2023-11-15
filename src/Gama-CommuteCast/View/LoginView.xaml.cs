@@ -99,8 +99,8 @@ namespace Gama_CommuteCast.View
                     conn.Close();
                     MessageBox.Show("Success");
                     /* Navigate to Main Window */
-                    MainWindow mainWindow = new MainWindow();
-                    mainWindow.Show();
+                    RealMainWindow window = new RealMainWindow();
+                    window.Show();
                     this.Close();
                 } 
                 catch (Exception ex)
