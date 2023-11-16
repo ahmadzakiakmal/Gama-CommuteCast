@@ -57,7 +57,7 @@
 
   <ItemGroup>
     <Page Update="RealMainWindow.xaml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
   </ItemGroup>
 

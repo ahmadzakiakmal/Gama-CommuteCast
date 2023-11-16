@@ -73,8 +73,8 @@ namespace Gama_CommuteCast.View
             if (usernameInput == "admin" && passwordInput == "admin")
             {
                 /* Navigate to Main Window */
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
+                RealMainWindow window = new RealMainWindow();
+                window.Show();
                 this.Close();
             }
             else
