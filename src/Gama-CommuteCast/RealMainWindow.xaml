@@ -104,28 +104,72 @@
                 </Grid>
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="130"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Grid x:Name="sidePnl">
                         <StackPanel Background="{StaticResource UGM-Yellow}">
                             <Image
-                                Width="90"
-                                Height="50"
+                                Width="120"
+                                Height="60"
                                 Source="/resources/img/gama-commutecast.png"
                                 Margin="0 10 0 10"/>
 
                             <Button 
                                 Content="HOME" 
+                                FontFamily="Montserrat"
                                 Background="{StaticResource UGM-White}" 
                                 Foreground="{StaticResource UGM-Blue}">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="{StaticResource UGM-White}" />
+                                        <Setter Property="Foreground" Value="{StaticResource UGM-Blue}" />
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="{StaticResource UGM-Blue}" />
+                                                <Setter Property="Foreground" Value="{StaticResource UGM-White}" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
                                         <Border
-                                            Width="90"
-                                            Height="30"
+                                            Width="auto"
+                                            Height="40"
                                             Background="{TemplateBinding Background}"
-                                            CornerRadius="5"
+                                            CornerRadius="0"
+                                            Margin="0 10">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
+                            <Button 
+                                Content="PROFILE"
+                                FontFamily="Montserrat"
+                                Background="{StaticResource UGM-White}" 
+                                Foreground="{StaticResource UGM-Blue}">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="{StaticResource UGM-White}" />
+                                        <Setter Property="Foreground" Value="{StaticResource UGM-Blue}" />
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="{StaticResource UGM-Blue}" />
+                                                <Setter Property="Foreground" Value="{StaticResource UGM-White}" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border
+                                            Width="auto"
+                                            Height="40"
+                                            Background="{TemplateBinding Background}"
+                                            CornerRadius="0"
                                             Margin="0 10">
                                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                                         </Border>

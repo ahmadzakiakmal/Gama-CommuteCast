@@ -23,6 +23,17 @@ namespace Gama_CommuteCast
         public UserControl1()
         {
             InitializeComponent();
+
+            // Zoom to the center of Faculty of Engineering UGM
+            Map.Center = new Microsoft.Maps.MapControl.WPF.Location(-7.765690, 110.373501);
+            Map.ZoomLevel = 15;
+
+            // Add a pushpin to the center of Faculty of Engineering UGM
+            Microsoft.Maps.MapControl.WPF.Pushpin pin = new Microsoft.Maps.MapControl.WPF.Pushpin();
+            pin.Location = new Microsoft.Maps.MapControl.WPF.Location(-7.765690, 110.373501);
+            Map.Children.Add(pin);
+            Map.ZoomLevel = 15;
+
         }
 
         private void ButtonMap_Click(object sender, RoutedEventArgs e)
