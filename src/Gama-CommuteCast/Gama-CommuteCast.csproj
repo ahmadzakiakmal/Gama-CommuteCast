@@ -19,6 +19,7 @@
     <PackageReference Include="GMap.NET.Core" Version="2.1.7" />
     <PackageReference Include="GMap.NET.WinPresentation" Version="2.1.7" />
     <PackageReference Include="MapSuiteDesktopForWpf-BareBone" Version="10.6.29" />
+    <PackageReference Include="Microsoft.Maps.MapControl.WPF" Version="1.0.0.3" />
     <PackageReference Include="Npgsql" Version="7.0.6" />
     <PackageReference Include="RestSharp" Version="110.2.0" />
     <PackageReference Include="System.IO.Ports" Version="7.0.0" />
