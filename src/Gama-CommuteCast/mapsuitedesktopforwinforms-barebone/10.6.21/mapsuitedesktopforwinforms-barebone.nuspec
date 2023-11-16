@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>MapSuiteDesktopForWinForms-BareBone</id>
+    <version>10.6.21</version>
+    <title>Map Suite Desktop for WinForms - BareBone</title>
+    <authors>ThinkGeo</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>MapSuiteDesktopForWinForms is based on .NET Framework. This package allows you to add maps and perform GIS spatial operations within your Winforms application. It provides classes to work with most GIS data formats, display popups, allow spatial drawing, manage projections, perform spatial operation and much more. Visit our website and wiki, link below, to learn more and watch Map Suite in action.
+
+** This is the barebone version of the Map Suite Desktop for Winforms and is intended for experienced Map Suite developers who require fine grain control over their dependencies.  All other developer please use the Standard Edition found at the link below. **
+
+Package Documentation: http://wiki.thinkgeo.com/wiki/map_suite_desktop_for_winforms#barebone
+
+Wiki Documentation: http://wiki.thinkgeo.com/wiki/map_suite_desktop_for_winforms
+
+Supported Platforms: Windows, Linux, macOS
+
+Other ThinkGeo Products:
+
+- Map Suite UI Components -
+    Map Suite Desktop 
+    Map Suite Mobile
+    Map Suite Web
+
+- Map Suite Servers and Services -
+    Map Suite World Streets
+    Map Suite World Imagery
+    Map Suite Routing
+    Map Suite Geocoder
+    Map Suite Reverse Geocoder
+    Map Suite Elevation</description>
+    <serviceable>false</serviceable>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="ThinkGeo.MapSuite" version="10.6.23" />
+        <dependency id="ThinkGeo.Cloud.Client" version="10.6.3" />
+        <dependency id="MapSuiteDependency-NewtonsoftJson" version="10.6.0" />
+      </group>
+    </dependencies>
+    <tags>Spatial GIS ThinkGeo MapSuite Map Suite .NET WinForms Windows Forms Desktop Control Mapping</tags>
+    <owners>ThinkGeo</owners>
+    <iconUrl>http://nuget.thinkgeo.com/logo.png</iconUrl>
+    <projectUrl>https://github.com/ThinkGeo/HowDoISample-ForWinForms</projectUrl>
+    <licenseUrl>http://wiki.thinkgeo.com/wiki/map_suite_license_agreement</licenseUrl>
+  </metadata>
+</package>
