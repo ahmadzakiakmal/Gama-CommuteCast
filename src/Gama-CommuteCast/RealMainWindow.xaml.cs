@@ -64,8 +64,10 @@ namespace Gama_CommuteCast
                 var response = client.Execute(request);
                 var content = response.Content;
                 var json = (JsonObject)JsonNode.Parse(content);
-                Trace.WriteLine(json["data"]["current"]["pollution"]["aqius"]);
-                lbIQA.Content = "IQA: " + json["data"]["current"]["pollution"]["aqius"];
+                int aqi = (int)json["data"]["current"]["pollution"]["aqius"];
+                int humidity = (int)json["data"]["current"]["weather"]["hu"];
+
+                lbIQA.Content = $"aqi: {aqi}, hum: {humidity}";
             } catch (Exception ex)
             {
                 Trace.WriteLine(ex.Message);
