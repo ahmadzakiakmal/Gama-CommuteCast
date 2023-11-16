@@ -108,7 +108,32 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Grid x:Name="sidePnl">
-                        <Button Content="TESTBUTTON" Background="{StaticResource UGM-Yellow}" Foreground="{StaticResource UGM-White}"></Button>
+                        <StackPanel Background="{StaticResource UGM-Yellow}">
+                            <Image
+                                Width="90"
+                                Height="50"
+                                Source="/resources/img/gama-commutecast.png"
+                                Margin="0 10 0 10"/>
+
+                            <Button 
+                                Content="HOME" 
+                                Background="{StaticResource UGM-White}" 
+                                Foreground="{StaticResource UGM-Blue}">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border
+                                            Width="90"
+                                            Height="30"
+                                            Background="{TemplateBinding Background}"
+                                            CornerRadius="5"
+                                            Margin="0 10">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
+                        </StackPanel>
                     </Grid>
                     <Grid Grid.Column="2">
                         <Button Content="Get Weather Data" HorizontalAlignment="Left" Margin="12,15,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>

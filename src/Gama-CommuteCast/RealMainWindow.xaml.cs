@@ -89,7 +89,6 @@ namespace Gama_CommuteCast
             Application.Current.Shutdown();
         }
 
-
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             string apiUrl = "https://ibnux.github.io/BMKG-importer/cuaca/501187.json";
