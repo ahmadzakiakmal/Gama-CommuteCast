@@ -41,10 +41,10 @@ namespace Gama_CommuteCast
                 {
                     Trace.WriteLine(item);
                 }
-                lb0.Content = $"00:00, {json[0]["cuaca"]}, {json[0]["tempC"]}°";
-                lb6.Content = $"06:00, {json[1]["cuaca"]}, {json[1]["tempC"]}°";
-                lb12.Content = $"12:00, {json[2]["cuaca"]}, {json[2]["tempC"]}°";
-                lb18.Content = $"18:00, {json[3]["cuaca"]}, {json[3]["tempC"]}°";
+                lb0.Content = $"00:00, {json[0]["cuaca"]}, temp: {json[0]["tempC"]}C°, hum: {json[0]["humidity"]}%";
+                lb6.Content = $"06:00, {json[1]["cuaca"]}, temp: {json[1]["tempC"]}C°, hum: {json[1]["humidity"]}%";
+                lb12.Content = $"12:00, {json[2]["cuaca"]}, temp: {json[2]["tempC"]}C°, hum: {json[2]["humidity"]}%";
+                lb18.Content = $"18:00, {json[3]["cuaca"]}, temp: {json[3]["tempC"]}C°, hum: {json[3]["humidity"]}%";
             }
             catch (Exception ex)
             {
@@ -67,7 +67,7 @@ namespace Gama_CommuteCast
                 int aqi = (int)json["data"]["current"]["pollution"]["aqius"];
                 int humidity = (int)json["data"]["current"]["weather"]["hu"];
 
-                lbIQA.Content = $"aqi: {aqi}, hum: {humidity}";
+                lbIQA.Content = $"aqi: {aqi}, current-humidity: {humidity}";
             } catch (Exception ex)
             {
                 Trace.WriteLine(ex.Message);
