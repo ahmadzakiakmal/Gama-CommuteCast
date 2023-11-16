@@ -7,12 +7,15 @@
         mc:Ignorable="d"
         Title="RealMainWindow" Height="450" Width="800">
     <Grid>
-            <Button Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
-        <Label Content="Cuaca di Sleman, Yogyakarta" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lb0" Content="00:00, , " HorizontalAlignment="Left" Margin="12,66,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label x:Name="lb6" Content="06:00, , " HorizontalAlignment="Left" Margin="12,92,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label x:Name="lb12" Content="12:00, , " HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label x:Name="lb18" Content="18:00, , " HorizontalAlignment="Left" Margin="12,144,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Button Content="Get Weather Data" HorizontalAlignment="Left" Margin="12,15,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <Label Content="Cuaca di Sleman, Yogyakarta" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lb0" Content="00:00, , " HorizontalAlignment="Left" Margin="12,66,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lb6" Content="06:00, , " HorizontalAlignment="Left" Margin="12,92,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lb12" Content="12:00, , " HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lb18" Content="18:00, , " HorizontalAlignment="Left" Margin="12,144,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnIQA" Content="Get Air Quality Data" HorizontalAlignment="Left" Margin="132,15,0,0" VerticalAlignment="Top" Click="btnIQA_Click"/>
+        <Label Content="Kualitas Udara di Sleman Yogyakarta" HorizontalAlignment="Left" Margin="302,40,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lbIQA" Content="???" HorizontalAlignment="Left" Margin="302,74,0,0" VerticalAlignment="Top"/>
 
 
     </Grid>

@@ -51,5 +51,25 @@ namespace Gama_CommuteCast
                 Trace.WriteLine(ex.Message);
             }
         }
+
+        private void btnIQA_Click(object sender, RoutedEventArgs e)
+        {
+            string apiKey = "44b26895-4bb4-4058-8abb-f41c19f22505";
+            string apiUrl = $"http://api.airvisual.com/v2/city?city=sleman&state=yogyakarta&country=indonesia&key={apiKey}";
+
+            try
+            {
+                var client = new RestClient(apiUrl);
+                var request = new RestRequest();
+                var response = client.Execute(request);
+                var content = response.Content;
+                var json = (JsonObject)JsonNode.Parse(content);
+                Trace.WriteLine(json["data"]["current"]["pollution"]["aqius"]);
+                lbIQA.Content = "IQA: " + json["data"]["current"]["pollution"]["aqius"];
+            } catch (Exception ex)
+            {
+                Trace.WriteLine(ex.Message);
+            }
+        }
     }
 }
