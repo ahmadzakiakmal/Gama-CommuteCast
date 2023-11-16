@@ -108,7 +108,7 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Grid x:Name="sidePnl">
-                        <Button Content="TESTBUTTON"></Button>
+                        <Button Content="TESTBUTTON" Background="{StaticResource UGM-Yellow}" Foreground="{StaticResource UGM-White}"></Button>
                     </Grid>
                     <Grid Grid.Column="2">
                         <Button Content="Get Weather Data" HorizontalAlignment="Left" Margin="12,15,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
