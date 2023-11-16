@@ -5,18 +5,125 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Gama_CommuteCast"
         mc:Ignorable="d"
-        Title="RealMainWindow" Height="450" Width="800">
-    <Grid>
-            <Button Content="Get Weather Data" HorizontalAlignment="Left" Margin="12,15,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
-        <Label Content="Cuaca di Sleman, Yogyakarta" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label x:Name="lb0" Content="00:00, , " HorizontalAlignment="Left" Margin="12,66,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lb6" Content="06:00, , " HorizontalAlignment="Left" Margin="12,92,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lb12" Content="12:00, , " HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lb18" Content="18:00, , " HorizontalAlignment="Left" Margin="12,144,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnIQA" Content="Get Air Quality Data" HorizontalAlignment="Left" Margin="132,15,0,0" VerticalAlignment="Top" Click="btnIQA_Click"/>
-        <Label Content="Kualitas Udara di Sleman Yogyakarta" HorizontalAlignment="Left" Margin="302,40,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label x:Name="lbIQA" Content="???" HorizontalAlignment="Left" Margin="302,74,0,0" VerticalAlignment="Top"/>
+        Title="RegisterView"
+        Width="800"
+        Height="550"
+        AllowsTransparency="True"
+        Background="Transparent"
+        MouseDown="Window_MouseDown"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        >
+    <Border CornerRadius="20">
+        <Border.Background>
+            <ImageBrush ImageSource="/resources/img/tayogama-road.jpg" Stretch="UniformToFill" />
+        </Border.Background>
 
+        <Border
+            Background="{StaticResource UGM-Blue}"
+            BorderThickness="2"
+            CornerRadius="15"
+            Opacity="0.95">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Offset="0.0" Color="{StaticResource UGM-Color-Blue}" />
+                    <GradientStop Offset="1.0" Color="{StaticResource UGM-Color-Blue}" />
+                    <GradientStop Offset="0.75" Color="{StaticResource UGM-Color-Yellow}" />
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="5" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                            Margin="20,0,0,0"
+                            VerticalAlignment="Center"
+                            FontFamily="Montserrat"
+                            FontSize="15"
+                            Foreground="{StaticResource UGM-White}"
+                            Text="Gama Commutecast" />
 
-    </Grid>
+                    <Button
+                            x:Name="btnMinimize"
+                            Grid.Column="1"
+                            Background="Green"
+                            BorderThickness="0"
+                            Click="BtnMinimize_OnClick"
+                            Content="-"
+                            Cursor="Hand"
+                            FontFamily="Montserrat"
+                            FontSize="20"
+                            Foreground="{StaticResource UGM-White}">
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border
+                                        Width="18"
+                                        Height="18"
+                                        Background="{TemplateBinding Background}"
+                                        CornerRadius="9">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Top" />
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button
+                            x:Name="btnClose"
+                            Grid.Column="2"
+                            Background="Red"
+                            BorderThickness="0"
+                            Click="BtnClose_OnClick"
+                            Content="x"
+                            Cursor="Hand"
+                            FontFamily="Montserrat"
+                            FontSize="12"
+                            Foreground="{StaticResource UGM-White}">
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border
+                                        Width="18"
+                                        Height="18"
+                                        Background="{TemplateBinding Background}"
+                                        CornerRadius="9">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid x:Name="sidePnl">
+                        <Button Content="TESTBUTTON"></Button>
+                    </Grid>
+                    <Grid Grid.Column="2">
+                        <Button Content="Get Weather Data" HorizontalAlignment="Left" Margin="12,15,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+                        <Label Content="Cuaca di Sleman, Yogyakarta" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="{StaticResource UGM-White}"/>
+                        <Label x:Name="lb0" Content="00:00, , " HorizontalAlignment="Left" Margin="12,66,0,0" VerticalAlignment="Top" Foreground="{StaticResource UGM-White}"/>
+                        <Label x:Name="lb6" Content="06:00, , " HorizontalAlignment="Left" Margin="12,92,0,0" VerticalAlignment="Top" Foreground="{StaticResource UGM-White}"/>
+                        <Label x:Name="lb12" Content="12:00, , " HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top" Foreground="{StaticResource UGM-White}"/>
+                        <Label x:Name="lb18" Content="18:00, , " HorizontalAlignment="Left" Margin="12,144,0,0" VerticalAlignment="Top" Foreground="{StaticResource UGM-White}"/>
+                        <Button x:Name="btnIQA" Content="Get Air Quality Data" HorizontalAlignment="Left" Margin="132,15,0,0" VerticalAlignment="Top" Click="btnIQA_Click"/>
+                        <Label Content="Kualitas Udara di Sleman Yogyakarta" HorizontalAlignment="Left" Margin="302,40,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="{StaticResource UGM-White}"/>
+                        <Label x:Name="lbIQA" Content="???" HorizontalAlignment="Left" Margin="302,74,0,0" VerticalAlignment="Top" Foreground="{StaticResource UGM-White}"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+        </Border>
+    </Border>
 </Window>

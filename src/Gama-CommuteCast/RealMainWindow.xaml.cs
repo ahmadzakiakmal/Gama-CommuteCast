@@ -26,6 +26,26 @@ namespace Gama_CommuteCast
         {
             InitializeComponent();
         }
+
+        // Window Drag
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
+        private void BtnMinimize_OnClick(object sender, RoutedEventArgs e)
+        {
+            /*Minimize the window*/
+            WindowState = WindowState.Minimized;
+        }
+
+        private void BtnClose_OnClick(object sender, RoutedEventArgs e)
+        {
+            /*Close the Application*/
+            Application.Current.Shutdown();
+        }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             string apiUrl = "https://ibnux.github.io/BMKG-importer/cuaca/501187.json";
