@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using RestSharp;
 using System.Diagnostics;
+using System.Windows.Threading;
 
 namespace Gama_CommuteCast
 {
@@ -22,9 +23,21 @@ namespace Gama_CommuteCast
     /// </summary>
     public partial class RealMainWindow : Window
     {
+        private DispatcherTimer timer;
         public RealMainWindow()
         {
             InitializeComponent();
+
+            // Initialize the timer
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(30);
+            timer.Tick += Timer_Tick;
+
+            // Start the timer
+            timer.Start();
+
+            // Initial API call
+            CallIqaApi();
 
             // Initiate MapFrame to show UserControl1
             MapFrame.Content = new UserControl1();
@@ -50,26 +63,6 @@ namespace Gama_CommuteCast
             {
                 Trace.WriteLine(ex.Message);
             }
-
-            string apiKey = "44b26895-4bb4-4058-8abb-f41c19f22505";
-            string apiUrl = $"http://api.airvisual.com/v2/city?city=sleman&state=yogyakarta&country=indonesia&key={apiKey}";
-
-            try
-            {
-                var client = new RestClient(apiUrl);
-                var request = new RestRequest();
-                var response = client.Execute(request);
-                var content = response.Content;
-                var json = (JsonObject)JsonNode.Parse(content);
-                int aqi = (int)json["data"]["current"]["pollution"]["aqius"];
-                int humidity = (int)json["data"]["current"]["weather"]["hu"];
-
-                lbIQA.Content = $"aqi: {aqi}, current-humidity: {humidity}";
-            }
-            catch (Exception ex)
-            {
-                Trace.WriteLine(ex.Message);
-            }
         }
 
         // Window Drag
@@ -78,6 +71,12 @@ namespace Gama_CommuteCast
             if (e.LeftButton == MouseButtonState.Pressed)
             {
                 DragMove();
+            }
+
+            // If the click position is in the Mapframe, then do not drag the window
+            if (e.GetPosition(MapFrame).X > 0 && e.GetPosition(MapFrame).X < MapFrame.ActualWidth && e.GetPosition(MapFrame).Y > 0 && e.GetPosition(MapFrame).Y < MapFrame.ActualHeight)
+            {
+                e.Handled = true;
             }
         }
         private void BtnMinimize_OnClick(object sender, RoutedEventArgs e)
@@ -118,7 +117,13 @@ namespace Gama_CommuteCast
             }
         }
 
-        private void btnIQA_Click(object sender, RoutedEventArgs e)
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            // Timer tick event handler, called every 30 seconds
+            CallIqaApi();
+        }
+
+        private void CallIqaApi()
         {
             string apiKey = "44b26895-4bb4-4058-8abb-f41c19f22505";
             string apiUrl = $"http://api.airvisual.com/v2/city?city=sleman&state=yogyakarta&country=indonesia&key={apiKey}";
@@ -134,7 +139,8 @@ namespace Gama_CommuteCast
                 int humidity = (int)json["data"]["current"]["weather"]["hu"];
 
                 lbIQA.Content = $"aqi: {aqi}, current-humidity: {humidity}";
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 Trace.WriteLine(ex.Message);
             }
