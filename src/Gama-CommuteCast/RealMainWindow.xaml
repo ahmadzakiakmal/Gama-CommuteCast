@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Gama_CommuteCast"
         mc:Ignorable="d"
         Title="RegisterView"
-        Width="800"
-        Height="550"
+        Width="1000"
+        Height="700"
         AllowsTransparency="True"
         Background="Transparent"
         MouseDown="Window_MouseDown"
@@ -136,15 +136,34 @@
                         </StackPanel>
                     </Grid>
                     <Grid Grid.Column="2">
-                        <Button Content="Get Weather Data" HorizontalAlignment="Left" Margin="12,15,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
-                        <Label Content="Cuaca di Sleman, Yogyakarta" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="{StaticResource UGM-White}"/>
-                        <Label x:Name="lb0" Content="00:00, , " HorizontalAlignment="Left" Margin="12,66,0,0" VerticalAlignment="Top" Foreground="{StaticResource UGM-White}"/>
-                        <Label x:Name="lb6" Content="06:00, , " HorizontalAlignment="Left" Margin="12,92,0,0" VerticalAlignment="Top" Foreground="{StaticResource UGM-White}"/>
-                        <Label x:Name="lb12" Content="12:00, , " HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top" Foreground="{StaticResource UGM-White}"/>
-                        <Label x:Name="lb18" Content="18:00, , " HorizontalAlignment="Left" Margin="12,144,0,0" VerticalAlignment="Top" Foreground="{StaticResource UGM-White}"/>
-                        <Button x:Name="btnIQA" Content="Get Air Quality Data" HorizontalAlignment="Left" Margin="132,15,0,0" VerticalAlignment="Top" Click="btnIQA_Click"/>
-                        <Label Content="Kualitas Udara di Sleman Yogyakarta" HorizontalAlignment="Left" Margin="302,40,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="{StaticResource UGM-White}"/>
-                        <Label x:Name="lbIQA" Content="???" HorizontalAlignment="Left" Margin="302,74,0,0" VerticalAlignment="Top" Foreground="{StaticResource UGM-White}"/>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="130"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="2" Background="{StaticResource UGM-White}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Label Content="Prediksi Cuaca" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="{StaticResource UGM-Blue}" Grid.Column="0" Grid.Row="0"/>
+                                <Label x:Name="lb0" Content="00:00, , " HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Foreground="{StaticResource UGM-Blue}" Grid.Column="0" Grid.Row="1"/>
+                                <Label x:Name="lb6" Content="06:00, , " HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Foreground="{StaticResource UGM-Blue}" Grid.Column="0" Grid.Row="2"/>
+                                <Label x:Name="lb12" Content="12:00, , " HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Foreground="{StaticResource UGM-Blue}" Grid.Column="0" Grid.Row="3"/>
+                                <Label x:Name="lb18" Content="18:00, , " HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Foreground="{StaticResource UGM-Blue}" Grid.Column="0" Grid.Row="4"/>
+                                <Label Content="Kualitas Udara" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="{StaticResource UGM-Blue}" Grid.Column="1" Grid.Row="0"/>
+                                <Label x:Name="lbIQA" Content="???" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Foreground="{StaticResource UGM-Blue}" Grid.Column="1" Grid.Row="1"/>
+                            </Grid>
+                            <Frame x:Name="MapFrame" Content="Frame" Grid.Row="0"/>
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>

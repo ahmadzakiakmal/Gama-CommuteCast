@@ -26,6 +26,9 @@ namespace Gama_CommuteCast
         {
             InitializeComponent();
 
+            // Initiate MapFrame to show UserControl1
+            MapFrame.Content = new UserControl1();
+
             try
             {
                 var client = new RestClient("https://ibnux.github.io/BMKG-importer/cuaca/501187.json");
