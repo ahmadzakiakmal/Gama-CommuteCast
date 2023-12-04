@@ -181,7 +181,15 @@ namespace Gama_CommuteCast.View
             string connectionString = "Host=20.231.106.166;Port=5432;Username=postgres;Password=kemong;Database=postgres";
             using (NpgsqlConnection conn = new NpgsqlConnection(connectionString))
             {
-                conn.Open();
+                try
+                {
+                    conn.Open();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                    return false;
+                }
 
                 // Create a SQL query that calls the stored procedure
                 string query = "SELECT IsUsernameUnique(@username);";

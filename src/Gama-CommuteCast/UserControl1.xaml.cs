@@ -62,7 +62,7 @@ namespace Gama_CommuteCast
             Map.Center = new Microsoft.Maps.MapControl.WPF.Location(-7.771423, 110.377733);
             Map.ZoomLevel = 15;
 
-            // Add a pushpin to the center of UGM
+            // Add a car pushpin to the center of UGM
             Microsoft.Maps.MapControl.WPF.Pushpin pin = new Microsoft.Maps.MapControl.WPF.Pushpin();
             pin.Location = new Microsoft.Maps.MapControl.WPF.Location(-7.771423, 110.377733);
             Map.Children.Add(pin);

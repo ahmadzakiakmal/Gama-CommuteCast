@@ -145,14 +145,13 @@
                                     </ControlTemplate>
                                 </Button.Template>
                             </Button>
-
                             <Button 
                                 Content="PROFILE"
                                 FontFamily="Montserrat"
                                 Background="{StaticResource UGM-White}" 
-                                Foreground="{StaticResource UGM-Blue}">
+                                Foreground="{StaticResource UGM-Blue}" Click="Button_Click" RenderTransformOrigin="0.515,1.071">
                                 <Button.Style>
-                                    <Style TargetType="Button">
+                                    <Style TargetType="{x:Type Button}">
                                         <Setter Property="Background" Value="{StaticResource UGM-White}" />
                                         <Setter Property="Foreground" Value="{StaticResource UGM-Blue}" />
                                         <Style.Triggers>
@@ -164,7 +163,37 @@
                                     </Style>
                                 </Button.Style>
                                 <Button.Template>
-                                    <ControlTemplate TargetType="Button">
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border
+                                            Width="auto"
+                                            Height="40"
+                                            Background="{TemplateBinding Background}"
+                                            CornerRadius="0"
+                                            Margin="0 10">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button 
+                                Content="LOGOUT"
+                                FontFamily="Montserrat"
+                                Background="{StaticResource UGM-White}" 
+                                Foreground="{StaticResource UGM-Blue}" Click="BtnLogout_Click" RenderTransformOrigin="0.515,1.071">
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Setter Property="Background" Value="{StaticResource UGM-White}" />
+                                        <Setter Property="Foreground" Value="{StaticResource UGM-Blue}" />
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="{StaticResource UGM-Blue}" />
+                                                <Setter Property="Foreground" Value="{StaticResource UGM-White}" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
                                         <Border
                                             Width="auto"
                                             Height="40"
@@ -206,7 +235,7 @@
                                 <Label Content="Kualitas Udara" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="{StaticResource UGM-Blue}" Grid.Column="1" Grid.Row="0"/>
                                 <Label x:Name="lbIQA" Content="???" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Foreground="{StaticResource UGM-Blue}" Grid.Column="1" Grid.Row="1"/>
                             </Grid>
-                            <Frame x:Name="MapFrame" Content="Frame" Grid.Row="0"/>
+                            <Frame x:Name="MapFrame" Content="Frame" Grid.Row="0" Navigated="MapFrame_Navigated"/>
                         </Grid>
                     </Grid>
                 </Grid>

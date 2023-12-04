@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 using RestSharp;
 using System.Diagnostics;
 using System.Windows.Threading;
+using System.Windows.Navigation;
+using Gama_CommuteCast.View;
 
 namespace Gama_CommuteCast
 {
@@ -121,6 +123,16 @@ namespace Gama_CommuteCast
         {
             // Timer tick event handler, called every 30 seconds
             CallIqaApi();
+
+        }
+
+        private void UpdateBusPostiion(Microsoft.Maps.MapControl.WPF.Pushpin pinParam)
+        {
+            // Update the pin param randomly
+            Random random = new Random();
+            double lat = random.NextDouble() * 0.01;
+            double lon = random.NextDouble() * 0.01;
+            pinParam.Location = new Microsoft.Maps.MapControl.WPF.Location(pinParam.Location.Latitude + lat, pinParam.Location.Longitude + lon);
         }
 
         private void CallIqaApi()
@@ -144,6 +156,25 @@ namespace Gama_CommuteCast
             {
                 Trace.WriteLine(ex.Message);
             }
+        }
+
+        private void MapFrame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // Show username and passowrd via messagebox
+            MessageBox.Show("Username: admin \n password: *****");
+        }
+
+        private void BtnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            // Logout and navigate to LoginView
+            LoginView loginView = new LoginView();
+            loginView.Show();
+            this.Close();
         }
     }
 }
